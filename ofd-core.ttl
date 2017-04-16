@@ -1,0 +1,242 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ofd: <https://w3id.org/openfooddata/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vf: <https://w3id.org/valueflows/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix qudt: <http://qudt.org/2.0/schema/qudt#> .
+
+<https://w3id.org/openfooddata/core> a owl:Ontology, adms:SemanticAsset;
+    dcterms:title "Open Food Data Ontology" ;
+    dcterms:description "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
+    dc:license "https://creativecommons.org/publicdomain/" ;
+    dcterms:modified "2017-02-17"^^xsd:date;
+    vann:preferredNamespaceUri "https://w3id.org/openfooddata/core" ;
+    vann:preferredNamespacePrefix "ofd" ;
+    foaf:homepage <https://w3id.org/openfooddata/core> ;
+    dcterms:created "2017-02-17"^^xsd:date ;
+    dcterms:publisher ofd:OFD ;
+    dcterms:partOf <https://w3id.org/openfooddata/> ;
+    dcterms:type <http://purl.org/adms/assettype/Ontology> ;
+    dcterms:status <http://purl.org/adms/status/UnderDevelopment> ;
+    dc:creator ofd:Kalin ;
+     .
+
+ofd:OFD a dcterms:Agent ;
+    foaf:member ofd:Kalin ;
+    foaf:name "Open Food Data" ;
+    foaf:homepage <http://www.openfooddata.org/> .
+
+ofd:Kalin a foaf:Person ;
+    foaf:name "Kalin Maldzhanski" ;
+    owl:SameAs  <http://djodjo.org> ;
+    foaf:homepage <http://djodjo.org> .
+
+############## base classes
+
+# to be used to build up non-strict, reusable Food Type hierarchies. simple mostly linked to common sources, ex: potato
+
+ofd:FoodType a owl:Class ;
+    rdfs:label "Food Type" ;
+    rdfs:comment "base class for hierarchical classification of Food Types" ;
+    .
+
+# TODO link with vf:Actor
+ofd:FoodActorType a owl:Class ;
+    rdfs:label "Food Actor" ;
+    rdfs:comment "base class for hierarchical classification of Food Actors" ;
+    .
+
+# to be used to build up non-strict, reusable Food product vocabularies (hierarchical or not)
+# TODO link with vf:ResourceMaterialItemTemplate when ready
+ofd:FoodProduct a owl:Class ;
+    rdfs:label "Food Product" ;
+    rdfs:comment "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product" ;
+    .
+
+# TODO link with vf:ServiceTemplate
+ofd:FoodService a owl:Class ;
+    rdfs:label "Food Service" ;
+    rdfs:comment "base class for Food Services. Instances are not actual Offerings." ;
+    .
+
+# these might be anything that is used in the processes, ex: glass/plastic container, paper/plastic bag, cold box, printing paper, etc.
+# TODO link with vf:ResourceMaterialItemTemplate when ready
+ofd:NonFoodItemType a owl:Class ;
+    rdfs:label "Non-Food Item" ;
+    .
+
+####################### base properties
+
+ofd:ActorRelation a owl:Class ;
+    rdfs:label "ActorRelation" ;
+
+ofd:hasRelation a owl:ObjectProperty ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:ActorRelation .
+
+ofd:relSubject a owl:ObjectProperty ;
+    rdfs:domain ofd:ActorRelation ;
+    rdfs:range foaf:Agent .
+
+ofd:relTopic a owl:ObjectProperty ;
+    rdfs:domain ofd:ActorRelation ;
+    rdfs:range owl:Thing .
+
+ofd:relatedService a owl:ObjectProperty ;
+    rdfs:label "relatedService" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "relates concept to a FoodService" ;
+    rdfs:domain skos:Concept ;
+    rdfs:range ofd:FoodServiceType .
+
+ofd:relatedFoodType a owl:ObjectProperty ;
+    rdfs:label "relatedFoodType" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "relates concept to a FoodService" ;
+    rdfs:domain skos:Concept ;
+    rdfs:range ofd:FoodType .
+
+ofd:relatedFoodProduct a owl:ObjectProperty ;
+    rdfs:label "relatedFoodProduct" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "relates concept to a FoodService" ;
+    rdfs:domain skos:Concept ;
+    rdfs:range ofd:FoodProduct .
+
+ofd:canHandleFoodType a owl:ObjectProperty ;
+    rdfs:label "canHandleFoodType" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "indicates that specific food taype is can be handled by this service" ;
+    rdfs:domain ofd:FoodServiceType ;
+    rdfs:range ofd:FoodType .
+
+ofd:canNotHandleFoodType a owl:ObjectProperty ;
+    rdfs:label "canNotHandleFoodType" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "indicates that specific food taype is cannot be handled by this service" ;
+    rdfs:domain ofd:FoodServiceType ;
+    rdfs:range ofd:FoodType .
+
+ofd:quantitativeRestriction a owl:ObjectProperty ;
+    rdfs:label "quantitativeRestriction" ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    rdfs:comment "custom restrictions that the Service can handle min and max or more values may be used" ;
+    rdfs:domain ofd:FoodServiceType ;
+    rdfs:range qudt:Value .
+
+ofd:storageTemp a owl:ObjectProperty ;
+    rdfs:label "storageTemp" ;
+    rdfs:comment "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used" ;
+    rdfs:domain ofd:FoodProduct ;
+    rdfs:range qudt:Value .
+
+ofd:storageDuration a owl:ObjectProperty ;
+    rdfs:label "storageDuration" ;
+    rdfs:comment "the allowed storage before consumption min and max or more values may be used" ;
+    rdfs:comment "the allowed storage before consumption min and max or more values may be used" ;
+    rdfs:domain ofd:FoodProduct ;
+    rdfs:range qudt:Value .
+
+ofd:harvestTime a owl:ObjectProperty ;
+    rdfs:label "harvestPeriod" ;
+    rdfs:comment "the min number of day/hours for the product to be available after purchase" ;
+    rdfs:domain ofd:FoodProduct;
+    rdfs:range qudt:QuantityValue .
+
+ofd:preparationTime a owl:ObjectProperty ;
+    rdfs:label "harvestPeriod" ;
+    rdfs:comment "the min number of day/hours for the Actor to be available after commitment" ;
+    rdfs:domain  ofd:FoodActor ;
+    rdfs:range qudt:QuantityValue .
+
+# links Types to Products
+ofd:broaderFoodType a owl:ObjectProperty ;
+    rdfs:label "broaderFoodType" ;
+    skos:prefLabel "food category"@en ;
+    rdfs:subPropertyOf skos:broadMatch ;
+    rdfs:domain ofd:FoodProduct ;
+    rdfs:range ofd:FoodType .
+
+ofd:narrowerFoodProduct a owl:ObjectProperty ;
+    rdfs:label "narrowerFoodProduct" ;
+    skos:prefLabel "related food product"@en ;
+    rdfs:subPropertyOf skos:narrowMatch ;
+    owl:inverseOf ofd:broaderFoodType ;
+    rdfs:domain ofd:FoodType ;
+    rdfs:range ofd:FoodProduct.
+
+ofd:actorType a owl:ObjectProperty ;
+    rdfs:label "actor Type" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodActorType .
+
+ofd:producesFoodType a owl:ObjectProperty ;
+    rdfs:label "offers FoodType" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodType.
+
+ofd:offersProduct a owl:ObjectProperty ;
+    rdfs:label "offers Product" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodProduct.
+
+ofd:providesService a owl:ObjectProperty ;
+    rdfs:label "provides Service" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodServiceType .
+
+ofd:offersNonFoodItem a owl:ObjectProperty ;
+    rdfs:label "offersNonFoodItem" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:NonFoodItemType .
+
+ofd:producedBy a owl:ObjectProperty ;
+    rdfs:label "producedBy" ;
+    rdfs:domain ofd:FoodProduct;
+    rdfs:range foaf:Agent .
+
+# the list of products the domain is made form
+ofd:madeOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    owl:inverseOf ofd:usedInMaking ;
+    rdfs:label "madeOf" ;
+    rdfs:domain ofd:FoodProduct;
+    rdfs:range ofd:FoodProduct.
+
+# reverse of madeOf
+ofd:usedInMaking a owl:ObjectProperty ;
+    rdfs:subPropertyOf skos:semanticRelation ;
+    owl:inverseOf ofd:madeOf ;
+    rdfs:label "usedInMaking" ;
+    rdfs:domain ofd:FoodProduct;
+    rdfs:range ofd:FoodProduct.
+
+# when it ts claimed
+ofd:claimedBy a owl:ObjectProperty ;
+    rdfs:label "claimedBy" ;
+    rdfs:comment "Identifies the Agent who claimed ownership on this Food Actor and its data" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range foaf:Agent .
+
+ofd:isLookingForPartners a owl:DataProperty ;
+    rdfs:label "isLookingForPartners" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range xsd:boolean .
+
+ofd:operationalCoverage a owl:ObjectProperty ;
+    rdfs:label "operationalCoverage" ;
+    rdfs:comment "activity coverage of a specific actor, which may depend on its agreements with other actors" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range schema:GeoShape .
+
+
+
+
+
