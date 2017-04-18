@@ -12,17 +12,17 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix qudt: <http://qudt.org/2.0/schema/qudt#> .
 
-<https://w3id.org/openfooddata/core> a owl:Ontology, adms:SemanticAsset;
+<https://w3id.org/openfooddata/onto/core> a owl:Ontology, adms:SemanticAsset;
     dcterms:title "Open Food Data Ontology" ;
     dcterms:description "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
     dc:license "https://creativecommons.org/publicdomain/" ;
     dcterms:modified "2017-04-18"^^xsd:date;
-    vann:preferredNamespaceUri "https://w3id.org/openfooddata/core" ;
+    vann:preferredNamespaceUri "https://w3id.org/openfooddata/onto/core" ;
     vann:preferredNamespacePrefix "ofd" ;
-    foaf:homepage <https://w3id.org/openfooddata/core> ;
+    foaf:homepage <https://openfooddata.github.io/onto/ofd-core.html> ;
     dcterms:created "2017-02-17"^^xsd:date ;
     dcterms:publisher ofd:OFD ;
-    dcterms:partOf <https://w3id.org/openfooddata/> ;
+    dcterms:partOf <https://w3id.org/openfooddata/onto> ;
     dcterms:type <http://purl.org/adms/assettype/Ontology> ;
     dcterms:status <http://purl.org/adms/status/UnderDevelopment> ;
     dc:creator ofd:Kalin ;
