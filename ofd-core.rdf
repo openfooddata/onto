@@ -14,14 +14,14 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
   <owl:Class rdf:about="https://w3id.org/openfooddata/core#FoodActorType">
-    <rdfs:comment>base class for hierarchical classification of Food Actors</rdfs:comment>
-    <rdfs:label>Food Actor</rdfs:label>
+    <rdfs:comment>base class for hierarchical or other classification of Food Actors</rdfs:comment>
+    <rdfs:label>Food Actor Type</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://w3id.org/openfooddata/core#FoodType">
     <rdfs:comment>base class for hierarchical classification of Food Types</rdfs:comment>
     <rdfs:label>Food Type</rdfs:label>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/openfooddata/core#NonFoodItemType">
+  <owl:Class rdf:about="https://w3id.org/openfooddata/core#NonFoodItem">
     <rdfs:label>Non-Food Item</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="https://w3id.org/openfooddata/core#FoodService">
@@ -92,6 +92,11 @@
     <rdfs:comment>the min number of day/hours for the product to be available after purchase</rdfs:comment>
     <rdfs:label>harvestPeriod</rdfs:label>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/core#offersService">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#FoodServiceType"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label>provides Service</rdfs:label>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/core#relatedService">
     <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#FoodServiceType"/>
     <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -100,7 +105,7 @@
     <rdfs:label>relatedService</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/core#offersNonFoodItem">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#NonFoodItemType"/>
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#NonFoodItem"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:label>offersNonFoodItem</rdfs:label>
   </owl:ObjectProperty>
@@ -152,11 +157,6 @@
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
     <rdfs:label>relatedFoodType</rdfs:label>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/core#providesService">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#FoodServiceType"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:label>provides Service</rdfs:label>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/core#actorType">
     <rdfs:range rdf:resource="https://w3id.org/openfooddata/core#FoodActorType"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -184,20 +184,20 @@
     <dc:creator>
       <foaf:Person rdf:about="https://w3id.org/openfooddata/core#Kalin">
         <foaf:homepage rdf:resource="http://djodjo.org"/>
-        <owl:SameAs rdf:resource="http://djodjo.org"/>
+        <owl:SameAs rdf:resource="http://djodjo.org#az"/>
         <foaf:name>Kalin Maldzhanski</foaf:name>
       </foaf:Person>
     </dc:creator>
     <dc:license>https://creativecommons.org/publicdomain/</dc:license>
     <foaf:homepage rdf:resource="https://w3id.org/openfooddata/core"/>
     <dcterms:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2017-04-18</dcterms:modified>
     <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2017-02-17</dcterms:created>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <vann:preferredNamespaceUri>https://w3id.org/openfooddata/core</vann:preferredNamespaceUri>
     <dcterms:title>Open Food Data Ontology</dcterms:title>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2017-02-17</dcterms:modified>
+    <vann:preferredNamespaceUri>https://w3id.org/openfooddata/core</vann:preferredNamespaceUri>
     <dcterms:description>This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those</dcterms:description>
     <dcterms:status rdf:resource="http://purl.org/adms/status/UnderDevelopment"/>
     <dcterms:publisher>

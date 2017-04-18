@@ -6,7 +6,7 @@
     "license" : "https://creativecommons.org/publicdomain/",
     "created" : "2017-02-17",
     "description" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those",
-    "modified" : "2017-02-17",
+    "modified" : "2017-04-18",
     "partOf" : "https://w3id.org/openfooddata/",
     "publisher" : "ofd:OFD",
     "status" : "http://purl.org/adms/status/UnderDevelopment",
@@ -18,8 +18,8 @@
   }, {
     "@id" : "ofd:FoodActorType",
     "@type" : "owl:Class",
-    "comment" : "base class for hierarchical classification of Food Actors",
-    "label" : "Food Actor"
+    "comment" : "base class for hierarchical or other classification of Food Actors",
+    "label" : "Food Actor Type"
   }, {
     "@id" : "ofd:FoodProduct",
     "@type" : "owl:Class",
@@ -38,11 +38,11 @@
   }, {
     "@id" : "ofd:Kalin",
     "@type" : "foaf:Person",
-    "SameAs" : "http://djodjo.org",
+    "SameAs" : "http://djodjo.org#az",
     "homepage" : "http://djodjo.org",
     "name" : "Kalin Maldzhanski"
   }, {
-    "@id" : "ofd:NonFoodItemType",
+    "@id" : "ofd:NonFoodItem",
     "@type" : "owl:Class",
     "label" : "Non-Food Item"
   }, {
@@ -129,13 +129,19 @@
     "@type" : "owl:ObjectProperty",
     "domain" : "foaf:Agent",
     "label" : "offersNonFoodItem",
-    "range" : "ofd:NonFoodItemType"
+    "range" : "ofd:NonFoodItem"
   }, {
     "@id" : "ofd:offersProduct",
     "@type" : "owl:ObjectProperty",
     "domain" : "foaf:Agent",
     "label" : "offers Product",
     "range" : "ofd:FoodProduct"
+  }, {
+    "@id" : "ofd:offersService",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "provides Service",
+    "range" : "ofd:FoodServiceType"
   }, {
     "@id" : "ofd:operationalCoverage",
     "@type" : "owl:ObjectProperty",
@@ -162,12 +168,6 @@
     "domain" : "foaf:Agent",
     "label" : "offers FoodType",
     "range" : "ofd:FoodType"
-  }, {
-    "@id" : "ofd:providesService",
-    "@type" : "owl:ObjectProperty",
-    "domain" : "foaf:Agent",
-    "label" : "provides Service",
-    "range" : "ofd:FoodServiceType"
   }, {
     "@id" : "ofd:quantitativeRestriction",
     "@type" : "owl:ObjectProperty",
@@ -267,19 +267,19 @@
       "@id" : "http://purl.org/dc/terms/type",
       "@type" : "@id"
     },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
     "created" : {
       "@id" : "http://purl.org/dc/terms/created",
       "@type" : "http://www.w3.org/2001/XMLSchema#date"
     },
-    "preferredNamespaceUri" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
-    },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
-    "modified" : {
-      "@id" : "http://purl.org/dc/terms/modified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
     "description" : {
       "@id" : "http://purl.org/dc/terms/description"

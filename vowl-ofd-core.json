@@ -51,7 +51,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2017-02-17",
+        "value" : "2017-04-18",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -112,19 +112,16 @@
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "2",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
     "id" : "30",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
+    "id" : "27",
     "type" : "owl:Class"
   }, {
     "id" : "31",
@@ -136,7 +133,10 @@
     "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "25",
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
     "type" : "owl:Class"
   }, {
     "id" : "38",
@@ -181,10 +181,10 @@
     "instances" : 0,
     "label" : {
       "IRI-based" : "FoodActorType",
-      "undefined" : "Food Actor"
+      "undefined" : "Food Actor Type"
     },
     "comment" : {
-      "undefined" : "base class for hierarchical classification of Food Actors"
+      "undefined" : "base class for hierarchical or other classification of Food Actors"
     },
     "id" : "20"
   }, {
@@ -220,7 +220,7 @@
       "IRI-based" : "GeoShape"
     },
     "attributes" : [ "external" ],
-    "id" : "26"
+    "id" : "24"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#DataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -237,16 +237,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "27"
-  }, {
-    "iri" : "https://w3id.org/openfooddata/core#NonFoodItemType",
-    "baseIri" : "https://w3id.org/openfooddata/core",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "NonFoodItemType",
-      "undefined" : "Non-Food Item"
-    },
-    "id" : "2"
+    "id" : "25"
   }, {
     "iri" : "http://purl.org/dc/terms/Agent",
     "baseIri" : "http://purl.org/dc/terms",
@@ -294,7 +285,7 @@
     "comment" : {
       "undefined" : "base class for hierarchical classification of Food Types"
     },
-    "id" : "28"
+    "id" : "27"
   }, {
     "iri" : "https://w3id.org/openfooddata/core#FoodService",
     "baseIri" : "https://w3id.org/openfooddata/core",
@@ -350,13 +341,22 @@
     "attributes" : [ "external" ],
     "id" : "32"
   }, {
+    "iri" : "https://w3id.org/openfooddata/core#NonFoodItem",
+    "baseIri" : "https://w3id.org/openfooddata/core",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NonFoodItem",
+      "undefined" : "Non-Food Item"
+    },
+    "id" : "2"
+  }, {
     "iri" : "https://w3id.org/openfooddata/core#FoodServiceType",
     "baseIri" : "https://w3id.org/openfooddata/core",
     "instances" : 0,
     "label" : {
       "IRI-based" : "FoodServiceType"
     },
-    "id" : "25"
+    "id" : "26"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
@@ -399,13 +399,13 @@
     "id" : "22",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "8",
     "type" : "owl:objectProperty"
   }, {
     "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
     "type" : "owl:objectProperty"
   }, {
     "id" : "29",
@@ -529,26 +529,15 @@
     "attributes" : [ "object" ],
     "id" : "22"
   }, {
-    "iri" : "https://w3id.org/openfooddata/core#providesService",
-    "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "providesService",
-      "undefined" : "provides Service"
-    },
-    "domain" : "1",
-    "attributes" : [ "object" ],
-    "id" : "24"
-  }, {
     "iri" : "https://w3id.org/openfooddata/core#canHandleFoodType",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "28",
+    "range" : "27",
     "label" : {
       "IRI-based" : "canHandleFoodType",
       "undefined" : "canHandleFoodType"
     },
     "superproperty" : [ "3" ],
-    "domain" : "25",
+    "domain" : "26",
     "comment" : {
       "undefined" : "indicates that specific food taype is can be handled by this service"
     },
@@ -576,11 +565,22 @@
     },
     "domain" : "17",
     "attributes" : [ "object" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/openfooddata/core#offersService",
+    "baseIri" : "https://w3id.org/openfooddata/core",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "offersService",
+      "undefined" : "provides Service"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
     "id" : "29"
   }, {
     "iri" : "https://w3id.org/openfooddata/core#relatedService",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "25",
+    "range" : "26",
     "label" : {
       "IRI-based" : "relatedService",
       "undefined" : "relatedService"
@@ -601,7 +601,7 @@
       "undefined" : "quantitativeRestriction"
     },
     "superproperty" : [ "3" ],
-    "domain" : "25",
+    "domain" : "26",
     "comment" : {
       "undefined" : "custom restrictions that the Service can handle min and max or more values may be used"
     },
@@ -610,7 +610,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/core#operationalCoverage",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "26",
+    "range" : "24",
     "label" : {
       "IRI-based" : "operationalCoverage",
       "undefined" : "operationalCoverage"
@@ -638,7 +638,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/core#broaderFoodType",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "28",
+    "range" : "27",
     "annotations" : {
       "prefLabel" : [ {
         "identifier" : "prefLabel",
@@ -673,7 +673,7 @@
       "undefined" : "narrowerFoodProduct"
     },
     "superproperty" : [ "37" ],
-    "domain" : "28",
+    "domain" : "27",
     "attributes" : [ "object" ],
     "id" : "36"
   }, {
@@ -743,13 +743,13 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/core#canNotHandleFoodType",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "28",
+    "range" : "27",
     "label" : {
       "IRI-based" : "canNotHandleFoodType",
       "undefined" : "canNotHandleFoodType"
     },
     "superproperty" : [ "3" ],
-    "domain" : "25",
+    "domain" : "26",
     "comment" : {
       "undefined" : "indicates that specific food taype is cannot be handled by this service"
     },
@@ -758,7 +758,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/core#relatedFoodType",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "28",
+    "range" : "27",
     "label" : {
       "IRI-based" : "relatedFoodType",
       "undefined" : "relatedFoodType"
@@ -801,7 +801,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/core#producesFoodType",
     "baseIri" : "https://w3id.org/openfooddata/core",
-    "range" : "28",
+    "range" : "27",
     "label" : {
       "IRI-based" : "producesFoodType",
       "undefined" : "offers FoodType"

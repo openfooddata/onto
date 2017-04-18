@@ -89,6 +89,19 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/core#NonFoodItem" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "Non-Food Item"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/core#broaderFoodType" : { 
     "http://www.w3.org/2004/02/skos/core#prefLabel" : [ { 
       "type" : "literal" ,
@@ -123,19 +136,6 @@
      ]
   }
    ,
-  "https://w3id.org/openfooddata/core#NonFoodItemType" : { 
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#Class"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "Non-Food Item"
-    }
-     ]
-  }
-   ,
   "https://w3id.org/openfooddata/core#FoodService" : { 
     "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
       "type" : "literal" ,
@@ -154,6 +154,29 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/core#offersService" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "provides Service"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/core#FoodServiceType"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/core#Kalin" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
@@ -167,7 +190,7 @@
      ] ,
     "http://www.w3.org/2002/07/owl#SameAs" : [ { 
       "type" : "uri" ,
-      "value" : "http://djodjo.org"
+      "value" : "http://djodjo.org#az"
     }
      ] ,
     "http://xmlns.com/foaf/0.1/homepage" : [ { 
@@ -567,7 +590,7 @@
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
       "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/core#NonFoodItemType"
+      "value" : "https://w3id.org/openfooddata/core#NonFoodItem"
     }
      ]
   }
@@ -575,7 +598,7 @@
   "https://w3id.org/openfooddata/core#FoodActorType" : { 
     "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
       "type" : "literal" ,
-      "value" : "base class for hierarchical classification of Food Actors"
+      "value" : "base class for hierarchical or other classification of Food Actors"
     }
      ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
@@ -585,7 +608,7 @@
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
-      "value" : "Food Actor"
+      "value" : "Food Actor Type"
     }
      ]
   }
@@ -722,29 +745,6 @@
      ]
   }
    ,
-  "https://w3id.org/openfooddata/core#providesService" : { 
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
-      "type" : "uri" ,
-      "value" : "http://xmlns.com/foaf/0.1/Agent"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "provides Service"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/core#FoodServiceType"
-    }
-     ]
-  }
-   ,
   "https://w3id.org/openfooddata/core#actorType" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
@@ -813,7 +813,7 @@
      ] ,
     "http://purl.org/dc/terms/modified" : [ { 
       "type" : "literal" ,
-      "value" : "2017-02-17" ,
+      "value" : "2017-04-18" ,
       "datatype" : "http://www.w3.org/2001/XMLSchema#date"
     }
      ] ,

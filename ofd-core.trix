@@ -122,6 +122,11 @@
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core</uri>
+      <uri>http://purl.org/dc/terms/modified</uri>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-18</typedLiteral>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core</uri>
       <uri>http://purl.org/dc/terms/created</uri>
       <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-17</typedLiteral>
     </triple>
@@ -132,18 +137,13 @@
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core</uri>
-      <uri>http://purl.org/vocab/vann/preferredNamespaceUri</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/openfooddata/core</typedLiteral>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core</uri>
       <uri>http://purl.org/dc/terms/title</uri>
       <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">Open Food Data Ontology</typedLiteral>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core</uri>
-      <uri>http://purl.org/dc/terms/modified</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#date">2017-02-17</typedLiteral>
+      <uri>http://purl.org/vocab/vann/preferredNamespaceUri</uri>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/openfooddata/core</typedLiteral>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core</uri>
@@ -163,12 +163,12 @@
     <triple>
       <uri>https://w3id.org/openfooddata/core#FoodActorType</uri>
       <uri>http://www.w3.org/2000/01/rdf-schema#comment</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">base class for hierarchical classification of Food Actors</typedLiteral>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">base class for hierarchical or other classification of Food Actors</typedLiteral>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#FoodActorType</uri>
       <uri>http://www.w3.org/2000/01/rdf-schema#label</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">Food Actor</typedLiteral>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">Food Actor Type</typedLiteral>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#FoodActorType</uri>
@@ -217,26 +217,6 @@
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#offersProduct</uri>
-      <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
-      <uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core#providesService</uri>
-      <uri>http://www.w3.org/2000/01/rdf-schema#range</uri>
-      <uri>https://w3id.org/openfooddata/core#FoodServiceType</uri>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core#providesService</uri>
-      <uri>http://www.w3.org/2000/01/rdf-schema#domain</uri>
-      <uri>http://xmlns.com/foaf/0.1/Agent</uri>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core#providesService</uri>
-      <uri>http://www.w3.org/2000/01/rdf-schema#label</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">provides Service</typedLiteral>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core#providesService</uri>
       <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
       <uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
     </triple>
@@ -358,7 +338,7 @@
     <triple>
       <uri>https://w3id.org/openfooddata/core#offersNonFoodItem</uri>
       <uri>http://www.w3.org/2000/01/rdf-schema#range</uri>
-      <uri>https://w3id.org/openfooddata/core#NonFoodItemType</uri>
+      <uri>https://w3id.org/openfooddata/core#NonFoodItem</uri>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#offersNonFoodItem</uri>
@@ -407,6 +387,26 @@
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#narrowerFoodProduct</uri>
+      <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+      <uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#offersService</uri>
+      <uri>http://www.w3.org/2000/01/rdf-schema#range</uri>
+      <uri>https://w3id.org/openfooddata/core#FoodServiceType</uri>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#offersService</uri>
+      <uri>http://www.w3.org/2000/01/rdf-schema#domain</uri>
+      <uri>http://xmlns.com/foaf/0.1/Agent</uri>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#offersService</uri>
+      <uri>http://www.w3.org/2000/01/rdf-schema#label</uri>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">provides Service</typedLiteral>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#offersService</uri>
       <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
       <uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
     </triple>
@@ -573,7 +573,7 @@
     <triple>
       <uri>https://w3id.org/openfooddata/core#Kalin</uri>
       <uri>http://www.w3.org/2002/07/owl#SameAs</uri>
-      <uri>http://djodjo.org</uri>
+      <uri>http://djodjo.org#az</uri>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#Kalin</uri>
@@ -651,16 +651,6 @@
       <uri>http://purl.org/dc/terms/Agent</uri>
     </triple>
     <triple>
-      <uri>https://w3id.org/openfooddata/core#NonFoodItemType</uri>
-      <uri>http://www.w3.org/2000/01/rdf-schema#label</uri>
-      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">Non-Food Item</typedLiteral>
-    </triple>
-    <triple>
-      <uri>https://w3id.org/openfooddata/core#NonFoodItemType</uri>
-      <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
-      <uri>http://www.w3.org/2002/07/owl#Class</uri>
-    </triple>
-    <triple>
       <uri>https://w3id.org/openfooddata/core#storageTemp</uri>
       <uri>http://www.w3.org/2000/01/rdf-schema#range</uri>
       <uri>http://qudt.org/2.0/schema/qudt#Value</uri>
@@ -684,6 +674,16 @@
       <uri>https://w3id.org/openfooddata/core#storageTemp</uri>
       <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
       <uri>http://www.w3.org/2002/07/owl#ObjectProperty</uri>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#NonFoodItem</uri>
+      <uri>http://www.w3.org/2000/01/rdf-schema#label</uri>
+      <typedLiteral datatype="http://www.w3.org/2001/XMLSchema#string">Non-Food Item</typedLiteral>
+    </triple>
+    <triple>
+      <uri>https://w3id.org/openfooddata/core#NonFoodItem</uri>
+      <uri>http://www.w3.org/1999/02/22-rdf-syntax-ns#type</uri>
+      <uri>http://www.w3.org/2002/07/owl#Class</uri>
     </triple>
     <triple>
       <uri>https://w3id.org/openfooddata/core#madeOf</uri>

@@ -41,7 +41,7 @@ ofd:FoodType  a       owl:Class ;
         dc:license                     "https://creativecommons.org/publicdomain/" ;
         dcterms:created                "2017-02-17"^^xsd:date ;
         dcterms:description            "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
-        dcterms:modified               "2017-02-17"^^xsd:date ;
+        dcterms:modified               "2017-04-18"^^xsd:date ;
         dcterms:partOf                 <https://w3id.org/openfooddata/> ;
         dcterms:publisher              ofd:OFD ;
         dcterms:status                 <http://purl.org/adms/status/UnderDevelopment> ;
@@ -52,8 +52,8 @@ ofd:FoodType  a       owl:Class ;
         foaf:homepage                  <https://w3id.org/openfooddata/core> .
 
 ofd:FoodActorType  a  owl:Class ;
-        rdfs:comment  "base class for hierarchical classification of Food Actors" ;
-        rdfs:label    "Food Actor" .
+        rdfs:comment  "base class for hierarchical or other classification of Food Actors" ;
+        rdfs:label    "Food Actor Type" .
 
 ofd:operationalCoverage
         a             owl:ObjectProperty ;
@@ -66,11 +66,6 @@ ofd:offersProduct  a  owl:ObjectProperty ;
         rdfs:domain  foaf:Agent ;
         rdfs:label   "offers Product" ;
         rdfs:range   ofd:FoodProduct .
-
-ofd:providesService  a  owl:ObjectProperty ;
-        rdfs:domain  foaf:Agent ;
-        rdfs:label   "provides Service" ;
-        rdfs:range   ofd:FoodServiceType .
 
 ofd:quantitativeRestriction
         a                   owl:ObjectProperty ;
@@ -106,7 +101,7 @@ ofd:offersNonFoodItem
         a            owl:ObjectProperty ;
         rdfs:domain  foaf:Agent ;
         rdfs:label   "offersNonFoodItem" ;
-        rdfs:range   ofd:NonFoodItemType .
+        rdfs:range   ofd:NonFoodItem .
 
 ofd:narrowerFoodProduct
         a                   owl:ObjectProperty ;
@@ -116,6 +111,11 @@ ofd:narrowerFoodProduct
         rdfs:subPropertyOf  skos:narrowMatch ;
         owl:inverseOf       ofd:broaderFoodType ;
         skos:prefLabel      "related food product"@en .
+
+ofd:offersService  a  owl:ObjectProperty ;
+        rdfs:domain  foaf:Agent ;
+        rdfs:label   "provides Service" ;
+        rdfs:range   ofd:FoodServiceType .
 
 ofd:actorType  a     owl:ObjectProperty ;
         rdfs:domain  foaf:Agent ;
@@ -156,7 +156,7 @@ ofd:relatedFoodType  a      owl:ObjectProperty ;
         rdfs:subPropertyOf  skos:semanticRelation .
 
 ofd:Kalin  a           foaf:Person ;
-        owl:SameAs     <http://djodjo.org> ;
+        owl:SameAs     <http://djodjo.org#az> ;
         foaf:homepage  <http://djodjo.org> ;
         foaf:name      "Kalin Maldzhanski" .
 
@@ -176,14 +176,14 @@ ofd:OFD  a             dcterms:Agent ;
         foaf:member    ofd:Kalin ;
         foaf:name      "Open Food Data" .
 
-ofd:NonFoodItemType  a  owl:Class ;
-        rdfs:label  "Non-Food Item" .
-
 ofd:storageTemp  a    owl:ObjectProperty ;
         rdfs:comment  "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used" ;
         rdfs:domain   ofd:FoodProduct ;
         rdfs:label    "storageTemp" ;
         rdfs:range    qudt:Value .
+
+ofd:NonFoodItem  a  owl:Class ;
+        rdfs:label  "Non-Food Item" .
 
 ofd:madeOf  a               owl:ObjectProperty ;
         rdfs:domain         ofd:FoodProduct ;
