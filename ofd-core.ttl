@@ -16,7 +16,7 @@
     dcterms:title "Open Food Data Ontology" ;
     dcterms:description "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
     dc:license "https://creativecommons.org/publicdomain/" ;
-    dcterms:modified "2017-02-17"^^xsd:date;
+    dcterms:modified "2017-04-18"^^xsd:date;
     vann:preferredNamespaceUri "https://w3id.org/openfooddata/core" ;
     vann:preferredNamespacePrefix "ofd" ;
     foaf:homepage <https://w3id.org/openfooddata/core> ;
@@ -35,7 +35,7 @@ ofd:OFD a dcterms:Agent ;
 
 ofd:Kalin a foaf:Person ;
     foaf:name "Kalin Maldzhanski" ;
-    owl:SameAs  <http://djodjo.org> ;
+    owl:SameAs  <http://djodjo.org#az> ;
     foaf:homepage <http://djodjo.org> .
 
 ############## base classes
@@ -47,10 +47,9 @@ ofd:FoodType a owl:Class ;
     rdfs:comment "base class for hierarchical classification of Food Types" ;
     .
 
-# TODO link with vf:Actor
 ofd:FoodActorType a owl:Class ;
-    rdfs:label "Food Actor" ;
-    rdfs:comment "base class for hierarchical classification of Food Actors" ;
+    rdfs:label "Food Actor Type" ;
+    rdfs:comment "base class for hierarchical or other classification of Food Actors" ;
     .
 
 # to be used to build up non-strict, reusable Food product vocabularies (hierarchical or not)
@@ -68,7 +67,7 @@ ofd:FoodService a owl:Class ;
 
 # these might be anything that is used in the processes, ex: glass/plastic container, paper/plastic bag, cold box, printing paper, etc.
 # TODO link with vf:ResourceMaterialItemTemplate when ready
-ofd:NonFoodItemType a owl:Class ;
+ofd:NonFoodItem a owl:Class ;
     rdfs:label "Non-Food Item" ;
     .
 
@@ -172,7 +171,7 @@ ofd:offersProduct a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodProduct.
 
-ofd:providesService a owl:ObjectProperty ;
+ofd:offersService a owl:ObjectProperty ;
     rdfs:label "provides Service" ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodServiceType .
@@ -180,7 +179,7 @@ ofd:providesService a owl:ObjectProperty ;
 ofd:offersNonFoodItem a owl:ObjectProperty ;
     rdfs:label "offersNonFoodItem" ;
     rdfs:domain foaf:Agent ;
-    rdfs:range ofd:NonFoodItemType .
+    rdfs:range ofd:NonFoodItem .
 
 ofd:producedBy a owl:ObjectProperty ;
     rdfs:label "producedBy" ;
