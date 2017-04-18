@@ -224,6 +224,23 @@
     "inverseOf" : "ofd:madeOf"
   } ],
   "@context" : {
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "member" : {
+      "@id" : "http://xmlns.com/foaf/0.1/member",
+      "@type" : "@id"
+    },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
@@ -232,19 +249,6 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
-    "subPropertyOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
-      "@type" : "@id"
-    },
-    "prefLabel" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
-    },
     "partOf" : {
       "@id" : "http://purl.org/dc/terms/partOf",
       "@type" : "@id"
@@ -252,15 +256,11 @@
     "preferredNamespacePrefix" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
     },
-    "creator" : {
-      "@id" : "http://purl.org/dc/elements/1.1/creator",
-      "@type" : "@id"
-    },
     "license" : {
       "@id" : "http://purl.org/dc/elements/1.1/license"
     },
-    "homepage" : {
-      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator",
       "@type" : "@id"
     },
     "type" : {
@@ -292,19 +292,19 @@
       "@id" : "http://purl.org/dc/terms/publisher",
       "@type" : "@id"
     },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
     "inverseOf" : {
       "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
       "@type" : "@id"
     },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
     "SameAs" : {
       "@id" : "http://www.w3.org/2002/07/owl#SameAs",
-      "@type" : "@id"
-    },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
-    },
-    "member" : {
-      "@id" : "http://xmlns.com/foaf/0.1/member",
       "@type" : "@id"
     },
     "schema" : "https://schema.org/",
@@ -314,7 +314,7 @@
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "skos" : "http://www.w3.org/2004/02/skos/core#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
-    "ofd" : "https://w3id.org/openfooddata/core#",
+    "ofd" : "https://w3id.org/openfooddata/onto/core#",
     "vf" : "https://w3id.org/valueflows/",
     "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "dcterms" : "http://purl.org/dc/terms/",
