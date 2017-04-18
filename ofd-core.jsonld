@@ -1,0 +1,325 @@
+{
+  "@graph" : [ {
+    "@id" : "https://w3id.org/openfooddata/core",
+    "@type" : [ "adms:SemanticAsset", "owl:Ontology" ],
+    "creator" : "ofd:Kalin",
+    "license" : "https://creativecommons.org/publicdomain/",
+    "created" : "2017-02-17",
+    "description" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those",
+    "modified" : "2017-02-17",
+    "partOf" : "https://w3id.org/openfooddata/",
+    "publisher" : "ofd:OFD",
+    "status" : "http://purl.org/adms/status/UnderDevelopment",
+    "title" : "Open Food Data Ontology",
+    "type" : "http://purl.org/adms/assettype/Ontology",
+    "preferredNamespacePrefix" : "ofd",
+    "preferredNamespaceUri" : "https://w3id.org/openfooddata/core",
+    "homepage" : "https://w3id.org/openfooddata/core"
+  }, {
+    "@id" : "ofd:FoodActorType",
+    "@type" : "owl:Class",
+    "comment" : "base class for hierarchical classification of Food Actors",
+    "label" : "Food Actor"
+  }, {
+    "@id" : "ofd:FoodProduct",
+    "@type" : "owl:Class",
+    "comment" : "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product",
+    "label" : "Food Product"
+  }, {
+    "@id" : "ofd:FoodService",
+    "@type" : "owl:Class",
+    "comment" : "base class for Food Services. Instances are not actual Offerings.",
+    "label" : "Food Service"
+  }, {
+    "@id" : "ofd:FoodType",
+    "@type" : "owl:Class",
+    "comment" : "base class for hierarchical classification of Food Types",
+    "label" : "Food Type"
+  }, {
+    "@id" : "ofd:Kalin",
+    "@type" : "foaf:Person",
+    "SameAs" : "http://djodjo.org",
+    "homepage" : "http://djodjo.org",
+    "name" : "Kalin Maldzhanski"
+  }, {
+    "@id" : "ofd:NonFoodItemType",
+    "@type" : "owl:Class",
+    "label" : "Non-Food Item"
+  }, {
+    "@id" : "ofd:OFD",
+    "@type" : "dcterms:Agent",
+    "homepage" : "http://www.openfooddata.org/",
+    "member" : "ofd:Kalin",
+    "name" : "Open Food Data"
+  }, {
+    "@id" : "ofd:actorType",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "actor Type",
+    "range" : "ofd:FoodActorType"
+  }, {
+    "@id" : "ofd:broaderFoodType",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:FoodProduct",
+    "label" : "broaderFoodType",
+    "range" : "ofd:FoodType",
+    "subPropertyOf" : "skos:broadMatch",
+    "prefLabel" : {
+      "@language" : "en",
+      "@value" : "food category"
+    }
+  }, {
+    "@id" : "ofd:canHandleFoodType",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "indicates that specific food taype is can be handled by this service",
+    "domain" : "ofd:FoodServiceType",
+    "label" : "canHandleFoodType",
+    "range" : "ofd:FoodType",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:canNotHandleFoodType",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "indicates that specific food taype is cannot be handled by this service",
+    "domain" : "ofd:FoodServiceType",
+    "label" : "canNotHandleFoodType",
+    "range" : "ofd:FoodType",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:claimedBy",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Identifies the Agent who claimed ownership on this Food Actor and its data",
+    "domain" : "foaf:Agent",
+    "label" : "claimedBy",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "ofd:harvestTime",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "the min number of day/hours for the product to be available after purchase",
+    "domain" : "ofd:FoodProduct",
+    "label" : "harvestPeriod",
+    "range" : "qudt:QuantityValue"
+  }, {
+    "@id" : "ofd:isLookingForPartners",
+    "@type" : "owl:DataProperty",
+    "domain" : "foaf:Agent",
+    "label" : "isLookingForPartners",
+    "range" : "xsd:boolean"
+  }, {
+    "@id" : "ofd:madeOf",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:FoodProduct",
+    "label" : "madeOf",
+    "range" : "ofd:FoodProduct",
+    "subPropertyOf" : "skos:semanticRelation",
+    "inverseOf" : "ofd:usedInMaking"
+  }, {
+    "@id" : "ofd:narrowerFoodProduct",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:FoodType",
+    "label" : "narrowerFoodProduct",
+    "range" : "ofd:FoodProduct",
+    "subPropertyOf" : "skos:narrowMatch",
+    "inverseOf" : "ofd:broaderFoodType",
+    "prefLabel" : {
+      "@language" : "en",
+      "@value" : "related food product"
+    }
+  }, {
+    "@id" : "ofd:offersNonFoodItem",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "offersNonFoodItem",
+    "range" : "ofd:NonFoodItemType"
+  }, {
+    "@id" : "ofd:offersProduct",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "offers Product",
+    "range" : "ofd:FoodProduct"
+  }, {
+    "@id" : "ofd:operationalCoverage",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "activity coverage of a specific actor, which may depend on its agreements with other actors",
+    "domain" : "foaf:Agent",
+    "label" : "operationalCoverage",
+    "range" : "schema:GeoShape"
+  }, {
+    "@id" : "ofd:preparationTime",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "the min number of day/hours for the Actor to be available after commitment",
+    "domain" : "ofd:FoodActor",
+    "label" : "harvestPeriod",
+    "range" : "qudt:QuantityValue"
+  }, {
+    "@id" : "ofd:producedBy",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:FoodProduct",
+    "label" : "producedBy",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "ofd:producesFoodType",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "offers FoodType",
+    "range" : "ofd:FoodType"
+  }, {
+    "@id" : "ofd:providesService",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "provides Service",
+    "range" : "ofd:FoodServiceType"
+  }, {
+    "@id" : "ofd:quantitativeRestriction",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "custom restrictions that the Service can handle min and max or more values may be used",
+    "domain" : "ofd:FoodServiceType",
+    "label" : "quantitativeRestriction",
+    "range" : "qudt:Value",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:relatedFoodProduct",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "relates concept to a FoodService",
+    "domain" : "skos:Concept",
+    "label" : "relatedFoodProduct",
+    "range" : "ofd:FoodProduct",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:relatedFoodType",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "relates concept to a FoodService",
+    "domain" : "skos:Concept",
+    "label" : "relatedFoodType",
+    "range" : "ofd:FoodType",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:relatedService",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "relates concept to a FoodService",
+    "domain" : "skos:Concept",
+    "label" : "relatedService",
+    "range" : "ofd:FoodServiceType",
+    "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:storageDuration",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "the allowed storage before consumption min and max or more values may be used",
+    "domain" : "ofd:FoodProduct",
+    "label" : "storageDuration",
+    "range" : "qudt:Value"
+  }, {
+    "@id" : "ofd:storageTemp",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used",
+    "domain" : "ofd:FoodProduct",
+    "label" : "storageTemp",
+    "range" : "qudt:Value"
+  }, {
+    "@id" : "ofd:usedInMaking",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:FoodProduct",
+    "label" : "usedInMaking",
+    "range" : "ofd:FoodProduct",
+    "subPropertyOf" : "skos:semanticRelation",
+    "inverseOf" : "ofd:madeOf"
+  } ],
+  "@context" : {
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "partOf" : {
+      "@id" : "http://purl.org/dc/terms/partOf",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/elements/1.1/license"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "status" : {
+      "@id" : "http://purl.org/dc/terms/status",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
+    "SameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#SameAs",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "member" : {
+      "@id" : "http://xmlns.com/foaf/0.1/member",
+      "@type" : "@id"
+    },
+    "schema" : "https://schema.org/",
+    "qudt" : "http://qudt.org/2.0/schema/qudt#",
+    "adms" : "http://www.w3.org/ns/adms#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "skos" : "http://www.w3.org/2004/02/skos/core#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "ofd" : "https://w3id.org/openfooddata/core#",
+    "vf" : "https://w3id.org/valueflows/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "dc" : "http://purl.org/dc/elements/1.1/"
+  }
+}
