@@ -74,21 +74,6 @@ ofd:NonFoodItemType a owl:Class ;
 
 ####################### base properties
 
-ofd:ActorRelation a owl:Class ;
-    rdfs:label "ActorRelation" ;
-
-ofd:hasRelation a owl:ObjectProperty ;
-    rdfs:domain foaf:Agent ;
-    rdfs:range ofd:ActorRelation .
-
-ofd:relSubject a owl:ObjectProperty ;
-    rdfs:domain ofd:ActorRelation ;
-    rdfs:range foaf:Agent .
-
-ofd:relTopic a owl:ObjectProperty ;
-    rdfs:domain ofd:ActorRelation ;
-    rdfs:range owl:Thing .
-
 ofd:relatedService a owl:ObjectProperty ;
     rdfs:label "relatedService" ;
     rdfs:subPropertyOf skos:semanticRelation ;
