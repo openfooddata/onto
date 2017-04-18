@@ -6,7 +6,7 @@
     "title" : {
       "undefined" : "Open Food Data Ontology"
     },
-    "iri" : "https://w3id.org/openfooddata/core",
+    "iri" : "https://w3id.org/openfooddata/onto/core",
     "author" : [ "https://w3id.org/openfooddata/onto/core#Kalin" ],
     "description" : {
       "undefined" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those"
@@ -15,7 +15,7 @@
       "partOf" : [ {
         "identifier" : "partOf",
         "language" : "undefined",
-        "value" : "https://w3id.org/openfooddata/",
+        "value" : "https://w3id.org/openfooddata/onto",
         "type" : "iri"
       } ],
       "license" : [ {
@@ -57,7 +57,7 @@
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
         "language" : "undefined",
-        "value" : "https://w3id.org/openfooddata/core",
+        "value" : "https://w3id.org/openfooddata/onto/core",
         "type" : "label"
       } ],
       "type" : [ {
@@ -75,7 +75,7 @@
       "homepage" : [ {
         "identifier" : "homepage",
         "language" : "undefined",
-        "value" : "https://w3id.org/openfooddata/core",
+        "value" : "https://openfooddata.github.io/onto/ofd-core.html",
         "type" : "iri"
       } ],
       "status" : [ {
@@ -155,7 +155,6 @@
     "label" : {
       "IRI-based" : "FoodActor"
     },
-    "attributes" : [ "external" ],
     "id" : "3"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#Concept",
@@ -192,8 +191,8 @@
       "IRI-based" : "SemanticAsset"
     },
     "individuals" : [ {
-      "iri" : "https://w3id.org/openfooddata/core",
-      "baseIri" : "https://w3id.org/openfooddata",
+      "iri" : "https://w3id.org/openfooddata/onto/core",
+      "baseIri" : "https://w3id.org/openfooddata/onto",
       "labels" : {
         "IRI-based" : "core"
       }
@@ -246,7 +245,6 @@
     "comment" : {
       "undefined" : "base class for hierarchical classification of Food Types"
     },
-    "attributes" : [ "external" ],
     "id" : "17"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodService",
@@ -259,7 +257,6 @@
     "comment" : {
       "undefined" : "base class for Food Services. Instances are not actual Offerings."
     },
-    "attributes" : [ "external" ],
     "id" : "27"
   }, {
     "iri" : "http://purl.org/dc/terms/Agent",
@@ -305,7 +302,6 @@
       "IRI-based" : "NonFoodItem",
       "undefined" : "Non-Food Item"
     },
-    "attributes" : [ "external" ],
     "id" : "29"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodActorType",
@@ -318,7 +314,6 @@
     "comment" : {
       "undefined" : "base class for hierarchical or other classification of Food Actors"
     },
-    "attributes" : [ "external" ],
     "id" : "30"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
@@ -361,7 +356,6 @@
     "comment" : {
       "undefined" : "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product"
     },
-    "attributes" : [ "external" ],
     "id" : "1"
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
@@ -384,7 +378,6 @@
     "label" : {
       "IRI-based" : "FoodServiceType"
     },
-    "attributes" : [ "external" ],
     "id" : "16"
   } ],
   "property" : [ {
@@ -475,7 +468,7 @@
       "undefined" : "producedBy"
     },
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "0"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#semanticRelation",
@@ -500,7 +493,7 @@
     "comment" : {
       "undefined" : "Identifies the Agent who claimed ownership on this Food Actor and its data"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "14"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#canHandleFoodType",
@@ -515,7 +508,7 @@
     "comment" : {
       "undefined" : "indicates that specific food taype is can be handled by this service"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "12"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#broadMatch",
@@ -546,7 +539,7 @@
     },
     "superproperty" : [ "18" ],
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "19"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#narrowerFoodProduct",
@@ -567,7 +560,7 @@
     },
     "superproperty" : [ "25" ],
     "domain" : "17",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "24"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#usedInMaking",
@@ -579,7 +572,7 @@
     },
     "superproperty" : [ "4" ],
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "7"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#operationalCoverage",
@@ -593,7 +586,7 @@
     "comment" : {
       "undefined" : "activity coverage of a specific actor, which may depend on its agreements with other actors"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "32"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#madeOf",
@@ -606,7 +599,7 @@
     },
     "superproperty" : [ "4" ],
     "domain" : "1",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "6"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#storageTemp",
@@ -620,7 +613,7 @@
     "comment" : {
       "undefined" : "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "33"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedService",
@@ -635,7 +628,7 @@
     "comment" : {
       "undefined" : "relates concept to a FoodService"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "8"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersProduct",
@@ -646,7 +639,7 @@
       "undefined" : "offers Product"
     },
     "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "34"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#isLookingForPartners",
@@ -657,7 +650,7 @@
       "undefined" : "isLookingForPartners"
     },
     "domain" : "2",
-    "attributes" : [ "datatype", "external" ],
+    "attributes" : [ "datatype" ],
     "id" : "35"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#harvestTime",
@@ -671,7 +664,7 @@
     "comment" : {
       "undefined" : "the min number of day/hours for the product to be available after purchase"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "37"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#producesFoodType",
@@ -682,7 +675,7 @@
       "undefined" : "offers FoodType"
     },
     "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "38"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#canNotHandleFoodType",
@@ -697,7 +690,7 @@
     "comment" : {
       "undefined" : "indicates that specific food taype is cannot be handled by this service"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "10"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersNonFoodItem",
@@ -708,7 +701,7 @@
       "undefined" : "offersNonFoodItem"
     },
     "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "39"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersService",
@@ -719,7 +712,7 @@
       "undefined" : "provides Service"
     },
     "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "40"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#actorType",
@@ -730,7 +723,7 @@
       "undefined" : "actor Type"
     },
     "domain" : "2",
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "41"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#storageDuration",
@@ -744,7 +737,7 @@
     "comment" : {
       "undefined" : "the allowed storage before consumption min and max or more values may be used"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "42"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodType",
@@ -759,7 +752,7 @@
     "comment" : {
       "undefined" : "relates concept to a FoodService"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "9"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
@@ -785,7 +778,7 @@
     "comment" : {
       "undefined" : "custom restrictions that the Service can handle min and max or more values may be used"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "13"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#preparationTime",
@@ -799,7 +792,7 @@
     "comment" : {
       "undefined" : "the min number of day/hours for the Actor to be available after commitment"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "43"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodProduct",
@@ -814,7 +807,7 @@
     "comment" : {
       "undefined" : "relates concept to a FoodService"
     },
-    "attributes" : [ "object", "external" ],
+    "attributes" : [ "object" ],
     "id" : "11"
   } ]
 }

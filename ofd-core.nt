@@ -10,21 +10,6 @@
 <https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#comment> "the min number of day/hours for the product to be available after purchase" .
 <https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#label> "harvestPeriod" .
 <https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/partOf> <https://w3id.org/openfooddata/> .
-<https://w3id.org/openfooddata/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> .
-<https://w3id.org/openfooddata/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ofd" .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/elements/1.1/license> "https://creativecommons.org/publicdomain/" .
-<https://w3id.org/openfooddata/core> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/openfooddata/core> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/elements/1.1/creator> <https://w3id.org/openfooddata/onto/core#Kalin> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/modified> "2017-04-18"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/created> "2017-02-17"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/openfooddata/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/title> "Open Food Data Ontology" .
-<https://w3id.org/openfooddata/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/openfooddata/core" .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/description> "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> .
-<https://w3id.org/openfooddata/core> <http://purl.org/dc/terms/publisher> <https://w3id.org/openfooddata/onto/core#OFD> .
 <https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
 <https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
 <https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the Agent who claimed ownership on this Food Actor and its data" .
@@ -117,6 +102,21 @@
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "offers FoodType" .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/elements/1.1/creator> <https://w3id.org/openfooddata/onto/core#Kalin> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/created> "2017-02-17"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/openfooddata/onto/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/title> "Open Food Data Ontology" .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/description> "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/elements/1.1/license> "https://creativecommons.org/publicdomain/" .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/partOf> <https://w3id.org/openfooddata/onto> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/openfooddata/onto/core" .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/modified> "2017-04-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/publisher> <https://w3id.org/openfooddata/onto/core#OFD> .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ofd" .
+<https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> .
+<https://w3id.org/openfooddata/onto/core> <http://xmlns.com/foaf/0.1/homepage> <https://openfooddata.github.io/onto/ofd-core.html> .
 <https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/homepage> <http://djodjo.org> .
 <https://w3id.org/openfooddata/onto/core#Kalin> <http://www.w3.org/2002/07/owl#SameAs> <http://djodjo.org#az> .
 <https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/name> "Kalin Maldzhanski" .

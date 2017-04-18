@@ -28,22 +28,6 @@ ofd:harvestTime  a    owl:ObjectProperty ;
         rdfs:label    "harvestPeriod" ;
         rdfs:range    qudt:QuantityValue .
 
-<https://w3id.org/openfooddata/core>
-        a                              adms:SemanticAsset , owl:Ontology ;
-        dc:creator                     ofd:Kalin ;
-        dc:license                     "https://creativecommons.org/publicdomain/" ;
-        dcterms:created                "2017-02-17"^^xsd:date ;
-        dcterms:description            "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
-        dcterms:modified               "2017-04-18"^^xsd:date ;
-        dcterms:partOf                 <https://w3id.org/openfooddata/> ;
-        dcterms:publisher              ofd:OFD ;
-        dcterms:status                 <http://purl.org/adms/status/UnderDevelopment> ;
-        dcterms:title                  "Open Food Data Ontology" ;
-        dcterms:type                   <http://purl.org/adms/assettype/Ontology> ;
-        vann:preferredNamespacePrefix  "ofd" ;
-        vann:preferredNamespaceUri     "https://w3id.org/openfooddata/core" ;
-        foaf:homepage                  <https://w3id.org/openfooddata/core> .
-
 ofd:claimedBy  a      owl:ObjectProperty ;
         rdfs:comment  "Identifies the Agent who claimed ownership on this Food Actor and its data" ;
         rdfs:domain   foaf:Agent ;
@@ -159,6 +143,22 @@ ofd:producesFoodType  a  owl:ObjectProperty ;
         rdfs:domain  foaf:Agent ;
         rdfs:label   "offers FoodType" ;
         rdfs:range   ofd:FoodType .
+
+<https://w3id.org/openfooddata/onto/core>
+        a                              adms:SemanticAsset , owl:Ontology ;
+        dc:creator                     ofd:Kalin ;
+        dc:license                     "https://creativecommons.org/publicdomain/" ;
+        dcterms:created                "2017-02-17"^^xsd:date ;
+        dcterms:description            "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those" ;
+        dcterms:modified               "2017-04-18"^^xsd:date ;
+        dcterms:partOf                 <https://w3id.org/openfooddata/onto> ;
+        dcterms:publisher              ofd:OFD ;
+        dcterms:status                 <http://purl.org/adms/status/UnderDevelopment> ;
+        dcterms:title                  "Open Food Data Ontology" ;
+        dcterms:type                   <http://purl.org/adms/assettype/Ontology> ;
+        vann:preferredNamespacePrefix  "ofd" ;
+        vann:preferredNamespaceUri     "https://w3id.org/openfooddata/onto/core" ;
+        foaf:homepage                  <https://openfooddata.github.io/onto/ofd-core.html> .
 
 ofd:Kalin  a           foaf:Person ;
         owl:SameAs     <http://djodjo.org#az> ;

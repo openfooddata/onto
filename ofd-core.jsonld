@@ -1,20 +1,20 @@
 {
   "@graph" : [ {
-    "@id" : "https://w3id.org/openfooddata/core",
+    "@id" : "https://w3id.org/openfooddata/onto/core",
     "@type" : [ "adms:SemanticAsset", "owl:Ontology" ],
     "creator" : "ofd:Kalin",
     "license" : "https://creativecommons.org/publicdomain/",
     "created" : "2017-02-17",
     "description" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those",
     "modified" : "2017-04-18",
-    "partOf" : "https://w3id.org/openfooddata/",
+    "partOf" : "https://w3id.org/openfooddata/onto",
     "publisher" : "ofd:OFD",
     "status" : "http://purl.org/adms/status/UnderDevelopment",
     "title" : "Open Food Data Ontology",
     "type" : "http://purl.org/adms/assettype/Ontology",
     "preferredNamespacePrefix" : "ofd",
-    "preferredNamespaceUri" : "https://w3id.org/openfooddata/core",
-    "homepage" : "https://w3id.org/openfooddata/core"
+    "preferredNamespaceUri" : "https://w3id.org/openfooddata/onto/core",
+    "homepage" : "https://openfooddata.github.io/onto/ofd-core.html"
   }, {
     "@id" : "ofd:FoodActorType",
     "@type" : "owl:Class",
@@ -249,49 +249,6 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
-    "partOf" : {
-      "@id" : "http://purl.org/dc/terms/partOf",
-      "@type" : "@id"
-    },
-    "preferredNamespacePrefix" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
-    },
-    "license" : {
-      "@id" : "http://purl.org/dc/elements/1.1/license"
-    },
-    "creator" : {
-      "@id" : "http://purl.org/dc/elements/1.1/creator",
-      "@type" : "@id"
-    },
-    "type" : {
-      "@id" : "http://purl.org/dc/terms/type",
-      "@type" : "@id"
-    },
-    "modified" : {
-      "@id" : "http://purl.org/dc/terms/modified",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "created" : {
-      "@id" : "http://purl.org/dc/terms/created",
-      "@type" : "http://www.w3.org/2001/XMLSchema#date"
-    },
-    "title" : {
-      "@id" : "http://purl.org/dc/terms/title"
-    },
-    "preferredNamespaceUri" : {
-      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
-    },
-    "description" : {
-      "@id" : "http://purl.org/dc/terms/description"
-    },
-    "status" : {
-      "@id" : "http://purl.org/dc/terms/status",
-      "@type" : "@id"
-    },
-    "publisher" : {
-      "@id" : "http://purl.org/dc/terms/publisher",
-      "@type" : "@id"
-    },
     "subPropertyOf" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
       "@type" : "@id"
@@ -302,6 +259,49 @@
     },
     "prefLabel" : {
       "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator",
+      "@type" : "@id"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/elements/1.1/license"
+    },
+    "partOf" : {
+      "@id" : "http://purl.org/dc/terms/partOf",
+      "@type" : "@id"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "type" : {
+      "@id" : "http://purl.org/dc/terms/type",
+      "@type" : "@id"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher",
+      "@type" : "@id"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "status" : {
+      "@id" : "http://purl.org/dc/terms/status",
+      "@type" : "@id"
     },
     "SameAs" : {
       "@id" : "http://www.w3.org/2002/07/owl#SameAs",

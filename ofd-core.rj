@@ -477,15 +477,89 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Ontology"
+    }
+    , { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/ns/adms#SemanticAsset"
+    }
+     ] ,
+    "http://purl.org/dc/elements/1.1/creator" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#Kalin"
+    }
+     ] ,
+    "http://purl.org/dc/terms/modified" : [ { 
+      "type" : "literal" ,
+      "value" : "2017-04-18" ,
+      "datatype" : "http://www.w3.org/2001/XMLSchema#date"
+    }
+     ] ,
+    "http://purl.org/dc/terms/description" : [ { 
+      "type" : "literal" ,
+      "value" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those"
+    }
+     ] ,
+    "http://xmlns.com/foaf/0.1/homepage" : [ { 
+      "type" : "uri" ,
+      "value" : "https://openfooddata.github.io/onto/ofd-core.html"
+    }
+     ] ,
+    "http://purl.org/dc/terms/type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://purl.org/adms/assettype/Ontology"
+    }
+     ] ,
+    "http://purl.org/dc/terms/status" : [ { 
+      "type" : "uri" ,
+      "value" : "http://purl.org/adms/status/UnderDevelopment"
+    }
+     ] ,
+    "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ { 
+      "type" : "literal" ,
+      "value" : "ofd"
+    }
+     ] ,
+    "http://purl.org/vocab/vann/preferredNamespaceUri" : [ { 
+      "type" : "literal" ,
+      "value" : "https://w3id.org/openfooddata/onto/core"
+    }
+     ] ,
+    "http://purl.org/dc/terms/publisher" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#OFD"
+    }
+     ] ,
+    "http://purl.org/dc/terms/created" : [ { 
+      "type" : "literal" ,
+      "value" : "2017-02-17" ,
+      "datatype" : "http://www.w3.org/2001/XMLSchema#date"
+    }
+     ] ,
+    "http://purl.org/dc/elements/1.1/license" : [ { 
+      "type" : "literal" ,
+      "value" : "https://creativecommons.org/publicdomain/"
+    }
+     ] ,
+    "http://purl.org/dc/terms/partOf" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto"
+    }
+     ] ,
+    "http://purl.org/dc/terms/title" : [ { 
+      "type" : "literal" ,
+      "value" : "Open Food Data Ontology"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#OFD" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://purl.org/dc/terms/Agent"
-    }
-     ] ,
-    "http://xmlns.com/foaf/0.1/member" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#Kalin"
     }
      ] ,
     "http://xmlns.com/foaf/0.1/name" : [ { 
@@ -497,18 +571,23 @@
       "type" : "uri" ,
       "value" : "http://www.openfooddata.org/"
     }
+     ] ,
+    "http://xmlns.com/foaf/0.1/member" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#Kalin"
+    }
      ]
   }
    ,
   "https://w3id.org/openfooddata/onto/core#FoodActorType" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "base class for hierarchical or other classification of Food Actors"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "base class for hierarchical or other classification of Food Actors"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
@@ -524,6 +603,11 @@
       "value" : "http://www.w3.org/2002/07/owl#DataProperty"
     }
      ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2001/XMLSchema#boolean"
+    }
+     ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
       "type" : "uri" ,
       "value" : "http://xmlns.com/foaf/0.1/Agent"
@@ -533,23 +617,23 @@
       "type" : "literal" ,
       "value" : "isLookingForPartners"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2001/XMLSchema#boolean"
-    }
      ]
   }
    ,
   "https://w3id.org/openfooddata/onto/core#relatedService" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "relates concept to a FoodService"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodServiceType"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "relates concept to a FoodService"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -566,11 +650,6 @@
       "type" : "uri" ,
       "value" : "http://www.w3.org/2004/02/skos/core#semanticRelation"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#FoodServiceType"
-    }
      ]
   }
    ,
@@ -578,6 +657,11 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -589,23 +673,23 @@
       "type" : "literal" ,
       "value" : "producedBy"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "http://xmlns.com/foaf/0.1/Agent"
-    }
      ]
   }
    ,
   "https://w3id.org/openfooddata/onto/core#usedInMaking" : { 
-    "http://www.w3.org/2002/07/owl#inverseOf" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#madeOf"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodProduct"
+    }
+     ] ,
+    "http://www.w3.org/2002/07/owl#inverseOf" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#madeOf"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -622,23 +706,23 @@
       "type" : "uri" ,
       "value" : "http://www.w3.org/2004/02/skos/core#semanticRelation"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#FoodProduct"
-    }
      ]
   }
    ,
   "https://w3id.org/openfooddata/onto/core#storageTemp" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://qudt.org/2.0/schema/qudt#Value"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -650,11 +734,6 @@
       "type" : "literal" ,
       "value" : "storageTemp"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "http://qudt.org/2.0/schema/qudt#Value"
-    }
      ]
   }
    ,
@@ -662,6 +741,11 @@
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodType"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -673,23 +757,23 @@
       "type" : "literal" ,
       "value" : "offers FoodType"
     }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#FoodType"
-    }
      ]
   }
    ,
   "https://w3id.org/openfooddata/onto/core#harvestTime" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "the min number of day/hours for the product to be available after purchase"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://qudt.org/2.0/schema/qudt#QuantityValue"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "the min number of day/hours for the product to be available after purchase"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -700,11 +784,6 @@
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
       "value" : "harvestPeriod"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "http://qudt.org/2.0/schema/qudt#QuantityValue"
     }
      ]
   }
@@ -728,6 +807,11 @@
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
     }
      ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#NonFoodItem"
+    }
+     ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
       "type" : "uri" ,
       "value" : "http://xmlns.com/foaf/0.1/Agent"
@@ -736,11 +820,6 @@
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
       "value" : "offersNonFoodItem"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#NonFoodItem"
     }
      ]
   }
@@ -769,14 +848,19 @@
   }
    ,
   "https://w3id.org/openfooddata/onto/core#operationalCoverage" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "activity coverage of a specific actor, which may depend on its agreements with other actors"
-    }
-     ] ,
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://schema.org/GeoShape"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "activity coverage of a specific actor, which may depend on its agreements with other actors"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -787,90 +871,6 @@
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
       "value" : "operationalCoverage"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "https://schema.org/GeoShape"
-    }
-     ]
-  }
-   ,
-  "https://w3id.org/openfooddata/core" : { 
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#Ontology"
-    }
-    , { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/ns/adms#SemanticAsset"
-    }
-     ] ,
-    "http://purl.org/dc/elements/1.1/creator" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#Kalin"
-    }
-     ] ,
-    "http://purl.org/dc/terms/modified" : [ { 
-      "type" : "literal" ,
-      "value" : "2017-04-18" ,
-      "datatype" : "http://www.w3.org/2001/XMLSchema#date"
-    }
-     ] ,
-    "http://xmlns.com/foaf/0.1/homepage" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/core"
-    }
-     ] ,
-    "http://purl.org/dc/terms/description" : [ { 
-      "type" : "literal" ,
-      "value" : "This ontology models the Open Food Data domain. It allows to describe food products, food producers/farmers, food shops/hubs and other actors and collaboration agreements between those"
-    }
-     ] ,
-    "http://purl.org/dc/terms/type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://purl.org/adms/assettype/Ontology"
-    }
-     ] ,
-    "http://purl.org/dc/terms/status" : [ { 
-      "type" : "uri" ,
-      "value" : "http://purl.org/adms/status/UnderDevelopment"
-    }
-     ] ,
-    "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ { 
-      "type" : "literal" ,
-      "value" : "ofd"
-    }
-     ] ,
-    "http://purl.org/vocab/vann/preferredNamespaceUri" : [ { 
-      "type" : "literal" ,
-      "value" : "https://w3id.org/openfooddata/core"
-    }
-     ] ,
-    "http://purl.org/dc/terms/publisher" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#OFD"
-    }
-     ] ,
-    "http://purl.org/dc/terms/partOf" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/"
-    }
-     ] ,
-    "http://purl.org/dc/elements/1.1/license" : [ { 
-      "type" : "literal" ,
-      "value" : "https://creativecommons.org/publicdomain/"
-    }
-     ] ,
-    "http://purl.org/dc/terms/created" : [ { 
-      "type" : "literal" ,
-      "value" : "2017-02-17" ,
-      "datatype" : "http://www.w3.org/2001/XMLSchema#date"
-    }
-     ] ,
-    "http://purl.org/dc/terms/title" : [ { 
-      "type" : "literal" ,
-      "value" : "Open Food Data Ontology"
     }
      ]
   }
