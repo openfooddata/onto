@@ -2,7 +2,7 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.0), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/openfooddata/onto/core", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://qudt.org/2.0/schema/qudt", "http://xmlns.com/foaf/0.1", "http://www.w3.org/ns/adms", "http://www.w3.org/2004/02/skos/core" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/cerif/frapo", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "https://schema.org", "https://w3id.org/openfooddata/onto/core", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://qudt.org/2.0/schema/qudt", "http://xmlns.com/foaf/0.1", "http://www.w3.org/ns/adms", "http://www.w3.org/2004/02/skos/core" ],
     "title" : {
       "undefined" : "Open Food Data Ontology"
     },
@@ -88,8 +88,8 @@
   },
   "namespace" : [ ],
   "metrics" : {
-    "classCount" : 16,
-    "objectPropertyCount" : 25,
+    "classCount" : 17,
+    "objectPropertyCount" : 26,
     "datatypePropertyCount" : 1,
     "individualCount" : 4
   },
@@ -136,10 +136,13 @@
     "id" : "31",
     "type" : "owl:Class"
   }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "37",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "5",
@@ -346,6 +349,15 @@
     "attributes" : [ "external" ],
     "id" : "31"
   }, {
+    "iri" : "http://purl.org/cerif/frapo/Account",
+    "baseIri" : "http://purl.org/cerif/frapo",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Account"
+    },
+    "attributes" : [ "external" ],
+    "id" : "35"
+  }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodProduct",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
     "instances" : 0,
@@ -360,7 +372,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "36",
+    "id" : "37",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -420,19 +432,16 @@
     "id" : "34",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "35",
+    "id" : "36",
     "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "37",
-    "type" : "owl:objectProperty"
   }, {
     "id" : "38",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "10",
+    "id" : "39",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "39",
+    "id" : "10",
     "type" : "owl:objectProperty"
   }, {
     "id" : "40",
@@ -444,7 +453,13 @@
     "id" : "42",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
     "type" : "owl:objectProperty"
   }, {
     "id" : "25",
@@ -453,7 +468,7 @@
     "id" : "13",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "43",
+    "id" : "45",
     "type" : "owl:objectProperty"
   }, {
     "id" : "11",
@@ -644,14 +659,14 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#isLookingForPartners",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "36",
+    "range" : "37",
     "label" : {
       "IRI-based" : "isLookingForPartners",
       "undefined" : "isLookingForPartners"
     },
     "domain" : "2",
     "attributes" : [ "datatype" ],
-    "id" : "35"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#harvestTime",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -665,7 +680,7 @@
       "undefined" : "the min number of day/hours for the product to be available after purchase"
     },
     "attributes" : [ "object" ],
-    "id" : "37"
+    "id" : "38"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#producesFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -676,7 +691,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "38"
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#canNotHandleFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -702,7 +717,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "39"
+    "id" : "40"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersService",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -713,7 +728,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "40"
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#actorType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -724,7 +739,7 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "41"
+    "id" : "42"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#storageDuration",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -738,7 +753,7 @@
       "undefined" : "the allowed storage before consumption min and max or more values may be used"
     },
     "attributes" : [ "object" ],
-    "id" : "42"
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -754,6 +769,20 @@
     },
     "attributes" : [ "object" ],
     "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/openfooddata/onto/core#hasFinancialAccount",
+    "baseIri" : "https://w3id.org/openfooddata/onto/core",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "hasFinancialAccount",
+      "undefined" : "hasFinancialAccount"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "an object property linking an Agent to a financial account"
+    },
+    "attributes" : [ "object" ],
+    "id" : "44"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -793,7 +822,7 @@
       "undefined" : "the min number of day/hours for the Actor to be available after commitment"
     },
     "attributes" : [ "object" ],
-    "id" : "43"
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodProduct",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",

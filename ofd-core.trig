@@ -2,6 +2,7 @@
 @prefix qudt:  <http://qudt.org/2.0/schema/qudt#> .
 @prefix adms:  <http://www.w3.org/ns/adms#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
@@ -51,6 +52,13 @@ ofd:offersNonFoodItem
 ofd:FoodActorType  a  owl:Class ;
         rdfs:comment  "base class for hierarchical or other classification of Food Actors" ;
         rdfs:label    "Food Actor Type" .
+
+ofd:hasFinancialAccount
+        a             owl:ObjectProperty ;
+        rdfs:comment  "an object property linking an Agent to a financial account" ;
+        rdfs:domain   foaf:Agent ;
+        rdfs:label    "hasFinancialAccount" ;
+        rdfs:range    frapo:Account .
 
 ofd:FoodProduct  a    owl:Class ;
         rdfs:comment  "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product" ;

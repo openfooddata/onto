@@ -99,6 +99,13 @@
     "label" : "harvestPeriod",
     "range" : "qudt:QuantityValue"
   }, {
+    "@id" : "ofd:hasFinancialAccount",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "an object property linking an Agent to a financial account",
+    "domain" : "foaf:Agent",
+    "label" : "hasFinancialAccount",
+    "range" : "frapo:Account"
+  }, {
     "@id" : "ofd:isLookingForPartners",
     "@type" : "owl:DataProperty",
     "domain" : "foaf:Agent",
@@ -311,6 +318,7 @@
     "qudt" : "http://qudt.org/2.0/schema/qudt#",
     "adms" : "http://www.w3.org/ns/adms#",
     "owl" : "http://www.w3.org/2002/07/owl#",
+    "frapo" : "http://purl.org/cerif/frapo/",
     "xsd" : "http://www.w3.org/2001/XMLSchema#",
     "skos" : "http://www.w3.org/2004/02/skos/core#",
     "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",

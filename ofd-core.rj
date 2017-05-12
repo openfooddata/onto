@@ -620,6 +620,34 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#hasFinancialAccount" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://purl.org/cerif/frapo/Account"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "an object property linking an Agent to a financial account"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "hasFinancialAccount"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#relatedService" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,

@@ -28,6 +28,11 @@
 <https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical or other classification of Food Actors" .
 <https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Actor Type" .
 <https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Account> .
+<https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "an object property linking an Agent to a financial account" .
+<https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#label> "hasFinancialAccount" .
+<https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product" .
 <https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Food Product" .
 <https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
