@@ -73,7 +73,7 @@ ofd:NonFoodItem a owl:Class ;
     .
 
 ####################### extra props
-ofd:hasFinancialAccount ;
+ofd:hasFinancialAccount a owl:ObjectProperty ;
     rdfs:label "hasFinancialAccount" ;
     rdfs:comment "an object property linking an Agent to a financial account" ;
     rdfs:domain foaf:Agent ;
