@@ -11,6 +11,7 @@
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix qudt: <http://qudt.org/2.0/schema/qudt#> .
+@prefix frapo: <http://purl.org/cerif/frapo/> .
 
 <https://w3id.org/openfooddata/onto/core> a owl:Ontology, adms:SemanticAsset;
     dcterms:title "Open Food Data Ontology" ;
@@ -70,6 +71,14 @@ ofd:FoodService a owl:Class ;
 ofd:NonFoodItem a owl:Class ;
     rdfs:label "Non-Food Item" ;
     .
+
+####################### extra props
+ofd:hasFinancialAccount ;
+    rdfs:label "hasFinancialAccount" ;
+    rdfs:comment "an object property linking an Agent to a financial account" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range frapo:Account .
+
 
 ####################### base properties
 
