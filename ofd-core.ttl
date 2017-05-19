@@ -170,13 +170,25 @@ ofd:actorType a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodActorType .
 
-ofd:producesFoodType a owl:ObjectProperty ;
+ofd:offersFoodType a owl:ObjectProperty ;
     rdfs:label "offers FoodType" ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodType.
 
+ofd:producesFoodType a owl:ObjectProperty ;
+    rdfs:label "produces FoodType" ;
+    rdfs:subPropertyOf ofd:offersFoodType ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodType.    
+
 ofd:offersProduct a owl:ObjectProperty ;
     rdfs:label "offers Product" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:FoodProduct.
+
+ofd:producesProduct a owl:ObjectProperty ;
+    rdfs:subPropertyOf ofd:offersProduct ;
+    rdfs:label "produces Product" ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodProduct.
 
