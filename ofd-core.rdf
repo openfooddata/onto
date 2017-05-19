@@ -33,38 +33,10 @@
     <rdfs:comment>base class for Food Services. Instances are not actual Offerings.</rdfs:comment>
     <rdfs:label>Food Service</rdfs:label>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersService">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:label>provides Service</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#narrowerFoodProduct">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
-    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#broaderFoodType"/>
-    </owl:inverseOf>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
-    <skos:prefLabel xml:lang="en">related food product</skos:prefLabel>
-    <rdfs:label>narrowerFoodProduct</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#claimedBy">
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:comment>Identifies the Agent who claimed ownership on this Food Actor and its data</rdfs:comment>
-    <rdfs:label>claimedBy</rdfs:label>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#actorType">
     <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodActorType"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:label>actor Type</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#canHandleFoodType">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
-    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
-    <rdfs:comment>indicates that specific food taype is can be handled by this service</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
-    <rdfs:label>canHandleFoodType</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#storageDuration">
     <rdfs:range rdf:resource="http://qudt.org/2.0/schema/qudt#Value"/>
@@ -94,6 +66,76 @@
     </owl:inverseOf>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
   </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#relatedFoodProduct">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment>relates concept to a FoodService</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:label>relatedFoodProduct</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersProduct">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label>offers Product</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersFoodType">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label>offers FoodType</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#relatedFoodType">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment>relates concept to a FoodService</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:label>relatedFoodType</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#broaderFoodType">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
+    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
+    <skos:prefLabel xml:lang="en">food category</skos:prefLabel>
+    <rdfs:label>broaderFoodType</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#quantitativeRestriction">
+    <rdfs:range rdf:resource="http://qudt.org/2.0/schema/qudt#Value"/>
+    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
+    <rdfs:comment>custom restrictions that the Service can handle min and max or more values may be used</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:label>quantitativeRestriction</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersService">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label>provides Service</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#narrowerFoodProduct">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
+    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/openfooddata/onto/core#broaderFoodType"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrowMatch"/>
+    <skos:prefLabel xml:lang="en">related food product</skos:prefLabel>
+    <rdfs:label>narrowerFoodProduct</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#claimedBy">
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment>Identifies the Agent who claimed ownership on this Food Actor and its data</rdfs:comment>
+    <rdfs:label>claimedBy</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#canHandleFoodType">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
+    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
+    <rdfs:comment>indicates that specific food taype is can be handled by this service</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
+    <rdfs:label>canHandleFoodType</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#producesProduct">
+    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:label>produces Product</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/openfooddata/onto/core#offersProduct"/>
+  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#hasFinancialAccount">
     <rdfs:range rdf:resource="http://purl.org/cerif/frapo/Account"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -106,13 +148,6 @@
     <rdfs:comment>relates concept to a FoodService</rdfs:comment>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
     <rdfs:label>relatedService</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#relatedFoodProduct">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment>relates concept to a FoodService</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
-    <rdfs:label>relatedFoodProduct</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#producedBy">
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -132,42 +167,17 @@
     <rdfs:comment>Temp range depending on the cold/heat tolerance of the food min and max or more values may be used</rdfs:comment>
     <rdfs:label>storageTemp</rdfs:label>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersProduct">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:label>offers Product</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#relatedFoodType">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
-    <rdfs:domain rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment>relates concept to a FoodService</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
-    <rdfs:label>relatedFoodType</rdfs:label>
-  </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#producesFoodType">
     <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:label>offers FoodType</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/openfooddata/onto/core#offersFoodType"/>
+    <rdfs:label>produces FoodType</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#harvestTime">
     <rdfs:range rdf:resource="http://qudt.org/2.0/schema/qudt#QuantityValue"/>
     <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
     <rdfs:comment>the min number of day/hours for the product to be available after purchase</rdfs:comment>
     <rdfs:label>harvestPeriod</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#broaderFoodType">
-    <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#FoodType"/>
-    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodProduct"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broadMatch"/>
-    <skos:prefLabel xml:lang="en">food category</skos:prefLabel>
-    <rdfs:label>broaderFoodType</rdfs:label>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#quantitativeRestriction">
-    <rdfs:range rdf:resource="http://qudt.org/2.0/schema/qudt#Value"/>
-    <rdfs:domain rdf:resource="https://w3id.org/openfooddata/onto/core#FoodServiceType"/>
-    <rdfs:comment>custom restrictions that the Service can handle min and max or more values may be used</rdfs:comment>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#semanticRelation"/>
-    <rdfs:label>quantitativeRestriction</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="https://w3id.org/openfooddata/onto/core#offersNonFoodItem">
     <rdfs:range rdf:resource="https://w3id.org/openfooddata/onto/core#NonFoodItem"/>

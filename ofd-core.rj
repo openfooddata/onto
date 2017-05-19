@@ -200,6 +200,29 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#offersFoodType" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "offers FoodType"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodType"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#relatedFoodType" : { 
     "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
       "type" : "literal" ,
@@ -597,6 +620,34 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#producesProduct" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodProduct"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "produces Product"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#offersProduct"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#isLookingForPartners" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
@@ -783,7 +834,12 @@
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
-      "value" : "offers FoodType"
+      "value" : "produces FoodType"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#offersFoodType"
     }
      ]
   }

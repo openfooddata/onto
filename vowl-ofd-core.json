@@ -89,7 +89,7 @@
   "namespace" : [ ],
   "metrics" : {
     "classCount" : 17,
-    "objectPropertyCount" : 26,
+    "objectPropertyCount" : 28,
     "datatypePropertyCount" : 1,
     "individualCount" : 4
   },
@@ -106,43 +106,43 @@
     "id" : "20",
     "type" : "owl:Class"
   }, {
-    "id" : "21",
-    "type" : "owl:Class"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
     "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "26",
-    "type" : "owl:Class"
-  }, {
-    "id" : "17",
+    "id" : "24",
     "type" : "owl:Class"
   }, {
     "id" : "27",
     "type" : "owl:Class"
   }, {
-    "id" : "28",
-    "type" : "owl:Class"
-  }, {
-    "id" : "29",
-    "type" : "owl:Class"
-  }, {
     "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
     "type" : "owl:Class"
   }, {
     "id" : "31",
     "type" : "owl:Class"
   }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
     "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:Class"
   }, {
-    "id" : "37",
+    "id" : "40",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "5",
@@ -201,7 +201,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "21"
+    "id" : "23"
   }, {
     "iri" : "http://qudt.org/2.0/schema/qudt#Value",
     "baseIri" : "http://qudt.org/2.0/schema/qudt",
@@ -210,7 +210,7 @@
       "IRI-based" : "Value"
     },
     "attributes" : [ "external" ],
-    "id" : "22"
+    "id" : "24"
   }, {
     "iri" : "https://schema.org/GeoShape",
     "baseIri" : "https://schema.org",
@@ -219,7 +219,7 @@
       "IRI-based" : "GeoShape"
     },
     "attributes" : [ "external" ],
-    "id" : "23"
+    "id" : "27"
   }, {
     "iri" : "http://www.w3.org/2002/07/owl#DataProperty",
     "baseIri" : "http://www.w3.org/2002/07/owl",
@@ -236,7 +236,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "26"
+    "id" : "30"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -260,7 +260,7 @@
     "comment" : {
       "undefined" : "base class for Food Services. Instances are not actual Offerings."
     },
-    "id" : "27"
+    "id" : "31"
   }, {
     "iri" : "http://purl.org/dc/terms/Agent",
     "baseIri" : "http://purl.org/dc/terms",
@@ -296,7 +296,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "28"
+    "id" : "32"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#NonFoodItem",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -305,7 +305,7 @@
       "IRI-based" : "NonFoodItem",
       "undefined" : "Non-Food Item"
     },
-    "id" : "29"
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodActorType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -317,7 +317,7 @@
     "comment" : {
       "undefined" : "base class for hierarchical or other classification of Food Actors"
     },
-    "id" : "30"
+    "id" : "34"
   }, {
     "iri" : "http://xmlns.com/foaf/0.1/Person",
     "baseIri" : "http://xmlns.com/foaf/0.1",
@@ -347,7 +347,7 @@
       }
     } ],
     "attributes" : [ "external" ],
-    "id" : "31"
+    "id" : "35"
   }, {
     "iri" : "http://purl.org/cerif/frapo/Account",
     "baseIri" : "http://purl.org/cerif/frapo",
@@ -356,7 +356,7 @@
       "IRI-based" : "Account"
     },
     "attributes" : [ "external" ],
-    "id" : "35"
+    "id" : "38"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#FoodProduct",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -372,7 +372,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "37",
+    "id" : "40",
     "label" : {
       "IRI-based" : "boolean"
     }
@@ -408,46 +408,46 @@
     "id" : "18",
     "type" : "owl:objectProperty"
   }, {
+    "id" : "21",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "19",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
+    "id" : "25",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "28",
     "type" : "owl:objectProperty"
   }, {
     "id" : "7",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "32",
+    "id" : "36",
     "type" : "owl:objectProperty"
   }, {
     "id" : "6",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "33",
+    "id" : "37",
     "type" : "owl:objectProperty"
   }, {
     "id" : "8",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "34",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "36",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "38",
+    "id" : "22",
     "type" : "owl:objectProperty"
   }, {
     "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
     "type" : "owl:objectProperty"
   }, {
     "id" : "10",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "40",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "41",
     "type" : "owl:objectProperty"
   }, {
     "id" : "42",
@@ -456,19 +456,25 @@
     "id" : "43",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "9",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "44",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "25",
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "29",
     "type" : "owl:objectProperty"
   }, {
     "id" : "13",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "45",
+    "id" : "47",
     "type" : "owl:objectProperty"
   }, {
     "id" : "11",
@@ -537,6 +543,18 @@
     "attributes" : [ "object", "external" ],
     "id" : "18"
   }, {
+    "iri" : "https://w3id.org/openfooddata/onto/core#producesProduct",
+    "baseIri" : "https://w3id.org/openfooddata/onto/core",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "producesProduct",
+      "undefined" : "produces Product"
+    },
+    "superproperty" : [ "22" ],
+    "domain" : "2",
+    "attributes" : [ "object" ],
+    "id" : "21"
+  }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#broaderFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
     "range" : "17",
@@ -557,6 +575,18 @@
     "attributes" : [ "object" ],
     "id" : "19"
   }, {
+    "iri" : "https://w3id.org/openfooddata/onto/core#offersFoodType",
+    "baseIri" : "https://w3id.org/openfooddata/onto/core",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "offersFoodType",
+      "undefined" : "offers FoodType"
+    },
+    "domain" : "2",
+    "subproperty" : [ "26" ],
+    "attributes" : [ "object" ],
+    "id" : "25"
+  }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#narrowerFoodProduct",
     "inverse" : "19",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -573,10 +603,10 @@
       "IRI-based" : "narrowerFoodProduct",
       "undefined" : "narrowerFoodProduct"
     },
-    "superproperty" : [ "25" ],
+    "superproperty" : [ "29" ],
     "domain" : "17",
     "attributes" : [ "object" ],
-    "id" : "24"
+    "id" : "28"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#usedInMaking",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -592,7 +622,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#operationalCoverage",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "23",
+    "range" : "27",
     "label" : {
       "IRI-based" : "operationalCoverage",
       "undefined" : "operationalCoverage"
@@ -602,7 +632,7 @@
       "undefined" : "activity coverage of a specific actor, which may depend on its agreements with other actors"
     },
     "attributes" : [ "object" ],
-    "id" : "32"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#madeOf",
     "inverse" : "7",
@@ -619,7 +649,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#storageTemp",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "22",
+    "range" : "24",
     "label" : {
       "IRI-based" : "storageTemp",
       "undefined" : "storageTemp"
@@ -629,7 +659,7 @@
       "undefined" : "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used"
     },
     "attributes" : [ "object" ],
-    "id" : "33"
+    "id" : "37"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedService",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -654,19 +684,20 @@
       "undefined" : "offers Product"
     },
     "domain" : "2",
+    "subproperty" : [ "21" ],
     "attributes" : [ "object" ],
-    "id" : "34"
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#isLookingForPartners",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "37",
+    "range" : "40",
     "label" : {
       "IRI-based" : "isLookingForPartners",
       "undefined" : "isLookingForPartners"
     },
     "domain" : "2",
     "attributes" : [ "datatype" ],
-    "id" : "36"
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#harvestTime",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -680,18 +711,19 @@
       "undefined" : "the min number of day/hours for the product to be available after purchase"
     },
     "attributes" : [ "object" ],
-    "id" : "38"
+    "id" : "41"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#producesFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
     "range" : "17",
     "label" : {
       "IRI-based" : "producesFoodType",
-      "undefined" : "offers FoodType"
+      "undefined" : "produces FoodType"
     },
+    "superproperty" : [ "25" ],
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "39"
+    "id" : "26"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#canNotHandleFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -710,14 +742,14 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersNonFoodItem",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "29",
+    "range" : "33",
     "label" : {
       "IRI-based" : "offersNonFoodItem",
       "undefined" : "offersNonFoodItem"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "40"
+    "id" : "42"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#offersService",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -728,22 +760,22 @@
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "41"
+    "id" : "43"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#actorType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "30",
+    "range" : "34",
     "label" : {
       "IRI-based" : "actorType",
       "undefined" : "actor Type"
     },
     "domain" : "2",
     "attributes" : [ "object" ],
-    "id" : "42"
+    "id" : "44"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#storageDuration",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "22",
+    "range" : "24",
     "label" : {
       "IRI-based" : "storageDuration",
       "undefined" : "storageDuration"
@@ -753,7 +785,7 @@
       "undefined" : "the allowed storage before consumption min and max or more values may be used"
     },
     "attributes" : [ "object" ],
-    "id" : "43"
+    "id" : "45"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodType",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
@@ -772,7 +804,7 @@
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#hasFinancialAccount",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "35",
+    "range" : "38",
     "label" : {
       "IRI-based" : "hasFinancialAccount",
       "undefined" : "hasFinancialAccount"
@@ -782,7 +814,7 @@
       "undefined" : "an object property linking an Agent to a financial account"
     },
     "attributes" : [ "object" ],
-    "id" : "44"
+    "id" : "46"
   }, {
     "iri" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
     "baseIri" : "http://www.w3.org/2004/02/skos/core",
@@ -791,13 +823,13 @@
       "IRI-based" : "narrowMatch"
     },
     "domain" : "5",
-    "subproperty" : [ "24" ],
+    "subproperty" : [ "28" ],
     "attributes" : [ "object", "external" ],
-    "id" : "25"
+    "id" : "29"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#quantitativeRestriction",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",
-    "range" : "22",
+    "range" : "24",
     "label" : {
       "IRI-based" : "quantitativeRestriction",
       "undefined" : "quantitativeRestriction"
@@ -822,7 +854,7 @@
       "undefined" : "the min number of day/hours for the Actor to be available after commitment"
     },
     "attributes" : [ "object" ],
-    "id" : "45"
+    "id" : "47"
   }, {
     "iri" : "https://w3id.org/openfooddata/onto/core#relatedFoodProduct",
     "baseIri" : "https://w3id.org/openfooddata/onto/core",

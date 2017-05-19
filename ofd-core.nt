@@ -1,6 +1,10 @@
 <https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical classification of Food Types" .
 <https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Type" .
 <https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "offers FoodType" .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/homepage> <http://www.openfooddata.org/> .
 <https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/name> "Open Food Data" .
 <https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/member> <https://w3id.org/openfooddata/onto/core#Kalin> .
@@ -103,9 +107,15 @@
 <https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#madeOf> .
 <https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
 <https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#label> "produces Product" .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/openfooddata/onto/core#offersProduct> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "offers FoodType" .
+<https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/openfooddata/onto/core#offersFoodType> .
+<https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "produces FoodType" .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> .
 <https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/elements/1.1/creator> <https://w3id.org/openfooddata/onto/core#Kalin> .

@@ -18,6 +18,11 @@ ofd:FoodType  a       owl:Class ;
         rdfs:comment  "base class for hierarchical classification of Food Types" ;
         rdfs:label    "Food Type" .
 
+ofd:offersFoodType  a  owl:ObjectProperty ;
+        rdfs:domain  foaf:Agent ;
+        rdfs:label   "offers FoodType" ;
+        rdfs:range   ofd:FoodType .
+
 ofd:OFD  a             dcterms:Agent ;
         foaf:homepage  <http://www.openfooddata.org/> ;
         foaf:member    ofd:Kalin ;
@@ -147,10 +152,17 @@ ofd:usedInMaking  a         owl:ObjectProperty ;
         rdfs:subPropertyOf  skos:semanticRelation ;
         owl:inverseOf       ofd:madeOf .
 
-ofd:producesFoodType  a  owl:ObjectProperty ;
-        rdfs:domain  foaf:Agent ;
-        rdfs:label   "offers FoodType" ;
-        rdfs:range   ofd:FoodType .
+ofd:producesProduct  a      owl:ObjectProperty ;
+        rdfs:domain         foaf:Agent ;
+        rdfs:label          "produces Product" ;
+        rdfs:range          ofd:FoodProduct ;
+        rdfs:subPropertyOf  ofd:offersProduct .
+
+ofd:producesFoodType  a     owl:ObjectProperty ;
+        rdfs:domain         foaf:Agent ;
+        rdfs:label          "produces FoodType" ;
+        rdfs:range          ofd:FoodType ;
+        rdfs:subPropertyOf  ofd:offersFoodType .
 
 <https://w3id.org/openfooddata/onto/core>
         a                              adms:SemanticAsset , owl:Ontology ;

@@ -132,6 +132,12 @@
       "@value" : "related food product"
     }
   }, {
+    "@id" : "ofd:offersFoodType",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "offers FoodType",
+    "range" : "ofd:FoodType"
+  }, {
     "@id" : "ofd:offersNonFoodItem",
     "@type" : "owl:ObjectProperty",
     "domain" : "foaf:Agent",
@@ -173,8 +179,16 @@
     "@id" : "ofd:producesFoodType",
     "@type" : "owl:ObjectProperty",
     "domain" : "foaf:Agent",
-    "label" : "offers FoodType",
-    "range" : "ofd:FoodType"
+    "label" : "produces FoodType",
+    "range" : "ofd:FoodType",
+    "subPropertyOf" : "ofd:offersFoodType"
+  }, {
+    "@id" : "ofd:producesProduct",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "foaf:Agent",
+    "label" : "produces Product",
+    "range" : "ofd:FoodProduct",
+    "subPropertyOf" : "ofd:offersProduct"
   }, {
     "@id" : "ofd:quantitativeRestriction",
     "@type" : "owl:ObjectProperty",
@@ -237,6 +251,14 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "domain" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
+      "@type" : "@id"
+    },
     "homepage" : {
       "@id" : "http://xmlns.com/foaf/0.1/homepage",
       "@type" : "@id"
@@ -246,14 +268,6 @@
     },
     "member" : {
       "@id" : "http://xmlns.com/foaf/0.1/member",
-      "@type" : "@id"
-    },
-    "range" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
-      "@type" : "@id"
-    },
-    "domain" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
     "subPropertyOf" : {
