@@ -1,122 +1,126 @@
-<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical classification of Food Types" .
-<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Type" .
-<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
-<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "offers FoodType" .
-<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/homepage> <http://www.openfooddata.org/> .
-<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/name> "Open Food Data" .
-<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/member> <https://w3id.org/openfooddata/onto/core#Kalin> .
-<https://w3id.org/openfooddata/onto/core#OFD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Agent> .
-<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#QuantityValue> .
-<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#comment> "the min number of day/hours for the product to be available after purchase" .
-<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#label> "harvestPeriod" .
-<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the Agent who claimed ownership on this Food Actor and its data" .
-<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#label> "claimedBy" .
-<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/GeoShape> .
+<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "activity coverage of a specific actor, which may depend on its agreements with other actors" .
+<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "operationalCoverage" .
+<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
+<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "the allowed storage before consumption min and max or more values may be used" .
+<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#label> "storageDuration" .
+<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates that specific food taype is can be handled by this service" .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "canHandleFoodType" .
 <https://w3id.org/openfooddata/onto/core#canHandleFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#NonFoodItem> .
-<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#label> "offersNonFoodItem" .
-<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical or other classification of Food Actors" .
-<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Actor Type" .
-<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodActorType> .
+<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#label> "actor Type" .
+<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#relatedActor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#relatedActor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#ActorRelationship> .
+<https://w3id.org/openfooddata/onto/core#relatedActor> <http://www.w3.org/2000/01/rdf-schema#label> "relatedActor" .
+<https://w3id.org/openfooddata/onto/core#relatedActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cerif/frapo/Account> .
 <https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
 <https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#comment> "an object property linking an Agent to a financial account" .
 <https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/2000/01/rdf-schema#label> "hasFinancialAccount" .
 <https://w3id.org/openfooddata/onto/core#hasFinancialAccount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product" .
-<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Food Product" .
-<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
-<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#comment> "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used" .
-<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#label> "storageTemp" .
-<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "relatedFoodType" .
-<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#NonFoodItem> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Food Item" .
-<https://w3id.org/openfooddata/onto/core#NonFoodItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
-<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#label> "isLookingForPartners" .
-<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
-<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#label> "producedBy" .
-<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for Food Services. Instances are not actual Offerings." .
-<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/2000/01/rdf-schema#label> "Food Service" .
-<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#label> "relatedService" .
-<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
-<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "the allowed storage before consumption min and max or more values may be used" .
-<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/2000/01/rdf-schema#label> "storageDuration" .
-<https://w3id.org/openfooddata/onto/core#storageDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#label> "madeOf" .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#usedInMaking> .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#QuantityValue> .
-<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodActor> .
-<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#comment> "the min number of day/hours for the Actor to be available after commitment" .
-<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#label> "harvestPeriod" .
-<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#broadMatch> .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/2004/02/skos/core#prefLabel> "food category"@en .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "broaderFoodType" .
 <https://w3id.org/openfooddata/onto/core#broaderFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/GeoShape> .
-<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "activity coverage of a specific actor, which may depend on its agreements with other actors" .
-<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "operationalCoverage" .
-<https://w3id.org/openfooddata/onto/core#operationalCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#label> "offers Product" .
-<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#label> "usedInMaking" .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#madeOf> .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#label> "produces Product" .
-<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/openfooddata/onto/core#offersProduct> .
-<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates that specific food taype is cannot be handled by this service" .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "canNotHandleFoodType" .
+<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#label> "madeOf" .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#usedInMaking> .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#madeOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for Food Services. Instances are not actual Offerings." .
+<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/2000/01/rdf-schema#label> "Food Service" .
+<https://w3id.org/openfooddata/onto/core#FoodService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#NonFoodItem> <http://www.w3.org/2000/01/rdf-schema#label> "Non-Food Item" .
+<https://w3id.org/openfooddata/onto/core#NonFoodItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/2000/01/rdf-schema#label> "relatedService" .
+<https://w3id.org/openfooddata/onto/core#relatedService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/openfooddata/onto/core#offersFoodType> .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "produces FoodType" .
 <https://w3id.org/openfooddata/onto/core#producesFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#label> "produces Product" .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/openfooddata/onto/core#offersProduct> .
+<https://w3id.org/openfooddata/onto/core#producesProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/2000/01/rdf-schema#label> "offers Product" .
+<https://w3id.org/openfooddata/onto/core#offersProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifies the Agent who claimed ownership on this Food Actor and its data" .
+<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/2000/01/rdf-schema#label> "claimedBy" .
+<https://w3id.org/openfooddata/onto/core#claimedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#ActorRelationship> <http://www.w3.org/2000/01/rdf-schema#comment> "Somewhat generic Relationship to another Food Actor in the context of the Flow of Food Products" .
+<https://w3id.org/openfooddata/onto/core#ActorRelationship> <http://www.w3.org/2000/01/rdf-schema#label> "ActorRelationship" .
+<https://w3id.org/openfooddata/onto/core#ActorRelationship> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/homepage> <http://djodjo.org> .
+<https://w3id.org/openfooddata/onto/core#Kalin> <http://www.w3.org/2002/07/owl#SameAs> <http://djodjo.org#az> .
+<https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/name> "Kalin Maldzhanski" .
+<https://w3id.org/openfooddata/onto/core#Kalin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#comment> "custom restrictions that the Service can handle min and max or more values may be used" .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "quantitativeRestriction" .
+<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#relatedContext> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#ActorRelationship> .
+<https://w3id.org/openfooddata/onto/core#relatedContext> <http://www.w3.org/2000/01/rdf-schema#comment> "context which identifies in more detail the kind of relationship. This could be a concept such as Actor Type or anything else which helps understand better the relationship" .
+<https://w3id.org/openfooddata/onto/core#relatedContext> <http://www.w3.org/2000/01/rdf-schema#label> "relatedContext" .
+<https://w3id.org/openfooddata/onto/core#relatedContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#QuantityValue> .
+<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodActor> .
+<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#comment> "the min number of day/hours for the Actor to be ready after commitment" .
+<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/2000/01/rdf-schema#label> "preparationTime" .
+<https://w3id.org/openfooddata/onto/core#preparationTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/homepage> <http://www.openfooddata.org/> .
+<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/name> "Open Food Data" .
+<https://w3id.org/openfooddata/onto/core#OFD> <http://xmlns.com/foaf/0.1/member> <https://w3id.org/openfooddata/onto/core#Kalin> .
+<https://w3id.org/openfooddata/onto/core#OFD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/Agent> .
+<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/2000/01/rdf-schema#label> "producedBy" .
+<https://w3id.org/openfooddata/onto/core#producedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
+<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#comment> "Temp range depending on the cold/heat tolerance of the food min and max or more values may be used" .
+<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/2000/01/rdf-schema#label> "storageTemp" .
+<https://w3id.org/openfooddata/onto/core#storageTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "relatedFoodProduct" .
+<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#upstreamRel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#ActorRelationship> .
+<https://w3id.org/openfooddata/onto/core#upstreamRel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#upstreamRel> <http://www.w3.org/2000/01/rdf-schema#comment> "relationship to other food actors of the upstream of the Food Products flow" .
+<https://w3id.org/openfooddata/onto/core#upstreamRel> <http://www.w3.org/2000/01/rdf-schema#label> "Upstream Relation" .
+<https://w3id.org/openfooddata/onto/core#upstreamRel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/openfooddata/onto/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> .
 <https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/elements/1.1/creator> <https://w3id.org/openfooddata/onto/core#Kalin> .
 <https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/created> "2017-02-17"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -132,10 +136,43 @@
 <https://w3id.org/openfooddata/onto/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ofd" .
 <https://w3id.org/openfooddata/onto/core> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> .
 <https://w3id.org/openfooddata/onto/core> <http://xmlns.com/foaf/0.1/homepage> <https://openfooddata.github.io/onto/ofd-core.html> .
-<https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/homepage> <http://djodjo.org> .
-<https://w3id.org/openfooddata/onto/core#Kalin> <http://www.w3.org/2002/07/owl#SameAs> <http://djodjo.org#az> .
-<https://w3id.org/openfooddata/onto/core#Kalin> <http://xmlns.com/foaf/0.1/name> "Kalin Maldzhanski" .
-<https://w3id.org/openfooddata/onto/core#Kalin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "offers FoodType" .
+<https://w3id.org/openfooddata/onto/core#offersFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical or other classification of Food Actors" .
+<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Actor Type" .
+<https://w3id.org/openfooddata/onto/core#FoodActorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#downstreamRel> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#ActorRelationship> .
+<https://w3id.org/openfooddata/onto/core#downstreamRel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#downstreamRel> <http://www.w3.org/2000/01/rdf-schema#comment> "relationship to other food actors of the downstream of the Food Products flow" .
+<https://w3id.org/openfooddata/onto/core#downstreamRel> <http://www.w3.org/2000/01/rdf-schema#label> "Upstream Relation" .
+<https://w3id.org/openfooddata/onto/core#downstreamRel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product" .
+<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "Food Product" .
+<https://w3id.org/openfooddata/onto/core#FoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
+<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#label> "provides Service" .
+<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "base class for hierarchical classification of Food Types" .
+<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/2000/01/rdf-schema#label> "Food Type" .
+<https://w3id.org/openfooddata/onto/core#FoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "relatedFoodType" .
+<https://w3id.org/openfooddata/onto/core#relatedFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#QuantityValue> .
+<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#comment> "the min number of day/hours for the product to be available after purchase" .
+<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/2000/01/rdf-schema#label> "harvestPeriod" .
+<https://w3id.org/openfooddata/onto/core#harvestTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/2000/01/rdf-schema#label> "isLookingForPartners" .
+<https://w3id.org/openfooddata/onto/core#isLookingForPartners> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> .
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodType> .
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#broaderFoodType> .
@@ -143,29 +180,13 @@
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/2004/02/skos/core#prefLabel> "related food product"@en .
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "narrowerFoodProduct" .
 <https://w3id.org/openfooddata/onto/core#narrowerFoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/2.0/schema/qudt#Value> .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#comment> "custom restrictions that the Service can handle min and max or more values may be used" .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "quantitativeRestriction" .
-<https://w3id.org/openfooddata/onto/core#quantitativeRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
-<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/2000/01/rdf-schema#label> "provides Service" .
-<https://w3id.org/openfooddata/onto/core#offersService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodType> .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodServiceType> .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates that specific food taype is cannot be handled by this service" .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/2000/01/rdf-schema#label> "canNotHandleFoodType" .
-<https://w3id.org/openfooddata/onto/core#canNotHandleFoodType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodActorType> .
-<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
-<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/2000/01/rdf-schema#label> "actor Type" .
-<https://w3id.org/openfooddata/onto/core#actorType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2004/02/skos/core#Concept> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "relates concept to a FoodService" .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/2000/01/rdf-schema#label> "relatedFoodProduct" .
-<https://w3id.org/openfooddata/onto/core#relatedFoodProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/openfooddata/onto/core#FoodProduct> .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#label> "usedInMaking" .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/openfooddata/onto/core#madeOf> .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#semanticRelation> .
+<https://w3id.org/openfooddata/onto/core#usedInMaking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/openfooddata/onto/core#NonFoodItem> .
+<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/2000/01/rdf-schema#label> "offersNonFoodItem" .
+<https://w3id.org/openfooddata/onto/core#offersNonFoodItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

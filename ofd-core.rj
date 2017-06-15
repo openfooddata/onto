@@ -22,6 +22,24 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#ActorRelationship" : { 
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "Somewhat generic Relationship to another Food Actor in the context of the Flow of Food Products"
+    }
+     ] ,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "ActorRelationship"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#storageDuration" : { 
     "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
       "type" : "literal" ,
@@ -46,34 +64,6 @@
     "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
       "type" : "uri" ,
       "value" : "http://qudt.org/2.0/schema/qudt#Value"
-    }
-     ]
-  }
-   ,
-  "https://w3id.org/openfooddata/onto/core#preparationTime" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "the min number of day/hours for the Actor to be available after commitment"
-    }
-     ] ,
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
-      "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#FoodActor"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "harvestPeriod"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
-      "type" : "uri" ,
-      "value" : "http://qudt.org/2.0/schema/qudt#QuantityValue"
     }
      ]
   }
@@ -111,6 +101,34 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#preparationTime" : { 
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "the min number of day/hours for the Actor to be ready after commitment"
+    }
+     ] ,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#FoodActor"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "preparationTime"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://qudt.org/2.0/schema/qudt#QuantityValue"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#madeOf" : { 
     "http://www.w3.org/2002/07/owl#inverseOf" : [ { 
       "type" : "uri" ,
@@ -140,6 +158,29 @@
     "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
       "type" : "uri" ,
       "value" : "https://w3id.org/openfooddata/onto/core#FoodProduct"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#relatedContext" : { 
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "context which identifies in more detail the kind of relationship. This could be a concept such as Actor Type or anything else which helps understand better the relationship"
+    }
+     ] ,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#ActorRelationship"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "relatedContext"
     }
      ]
   }
@@ -290,24 +331,6 @@
      ]
   }
    ,
-  "https://w3id.org/openfooddata/onto/core#FoodProduct" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product"
-    }
-     ] ,
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#Class"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "Food Product"
-    }
-     ]
-  }
-   ,
   "https://w3id.org/openfooddata/onto/core#quantitativeRestriction" : { 
     "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
       "type" : "literal" ,
@@ -337,6 +360,24 @@
     "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
       "type" : "uri" ,
       "value" : "http://qudt.org/2.0/schema/qudt#Value"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#FoodProduct" : { 
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "base class for Food Products. Instances are not actual Offerings. Instances might also be of type schema:Product"
+    }
+     ] ,
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "Food Product"
     }
      ]
   }
@@ -482,24 +523,6 @@
      ]
   }
    ,
-  "https://w3id.org/openfooddata/onto/core#FoodType" : { 
-    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
-      "type" : "literal" ,
-      "value" : "base class for hierarchical classification of Food Types"
-    }
-     ] ,
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#Class"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "Food Type"
-    }
-     ]
-  }
-   ,
   "https://w3id.org/openfooddata/onto/core" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
@@ -575,6 +598,24 @@
     "http://purl.org/dc/terms/title" : [ { 
       "type" : "literal" ,
       "value" : "Open Food Data Ontology"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#FoodType" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "base class for hierarchical classification of Food Types"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "Food Type"
     }
      ]
   }
@@ -732,6 +773,34 @@
      ]
   }
    ,
+  "https://w3id.org/openfooddata/onto/core#downstreamRel" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#ActorRelationship"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "relationship to other food actors of the downstream of the Food Products flow"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "Upstream Relation"
+    }
+     ]
+  }
+   ,
   "https://w3id.org/openfooddata/onto/core#producedBy" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
@@ -751,6 +820,29 @@
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
       "value" : "producedBy"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#relatedActor" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#ActorRelationship"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "relatedActor"
     }
      ]
   }
@@ -872,20 +964,7 @@
      ]
   }
    ,
-  "https://w3id.org/openfooddata/onto/core#NonFoodItem" : { 
-    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
-      "type" : "uri" ,
-      "value" : "http://www.w3.org/2002/07/owl#Class"
-    }
-     ] ,
-    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
-      "type" : "literal" ,
-      "value" : "Non-Food Item"
-    }
-     ]
-  }
-   ,
-  "https://w3id.org/openfooddata/onto/core#offersNonFoodItem" : { 
+  "https://w3id.org/openfooddata/onto/core#upstreamRel" : { 
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
       "type" : "uri" ,
       "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
@@ -893,7 +972,12 @@
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
       "type" : "uri" ,
-      "value" : "https://w3id.org/openfooddata/onto/core#NonFoodItem"
+      "value" : "https://w3id.org/openfooddata/onto/core#ActorRelationship"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#comment" : [ { 
+      "type" : "literal" ,
+      "value" : "relationship to other food actors of the upstream of the Food Products flow"
     }
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
@@ -903,7 +987,20 @@
      ] ,
     "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
       "type" : "literal" ,
-      "value" : "offersNonFoodItem"
+      "value" : "Upstream Relation"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#NonFoodItem" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#Class"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "Non-Food Item"
     }
      ]
   }
@@ -927,6 +1024,29 @@
     "http://xmlns.com/foaf/0.1/homepage" : [ { 
       "type" : "uri" ,
       "value" : "http://djodjo.org"
+    }
+     ]
+  }
+   ,
+  "https://w3id.org/openfooddata/onto/core#offersNonFoodItem" : { 
+    "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ { 
+      "type" : "uri" ,
+      "value" : "http://www.w3.org/2002/07/owl#ObjectProperty"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#range" : [ { 
+      "type" : "uri" ,
+      "value" : "https://w3id.org/openfooddata/onto/core#NonFoodItem"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#domain" : [ { 
+      "type" : "uri" ,
+      "value" : "http://xmlns.com/foaf/0.1/Agent"
+    }
+     ] ,
+    "http://www.w3.org/2000/01/rdf-schema#label" : [ { 
+      "type" : "literal" ,
+      "value" : "offersNonFoodItem"
     }
      ]
   }

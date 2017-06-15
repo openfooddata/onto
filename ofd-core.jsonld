@@ -16,6 +16,11 @@
     "preferredNamespaceUri" : "https://w3id.org/openfooddata/onto/core",
     "homepage" : "https://openfooddata.github.io/onto/ofd-core.html"
   }, {
+    "@id" : "ofd:ActorRelationship",
+    "@type" : "owl:Class",
+    "comment" : "Somewhat generic Relationship to another Food Actor in the context of the Flow of Food Products",
+    "label" : "ActorRelationship"
+  }, {
     "@id" : "ofd:FoodActorType",
     "@type" : "owl:Class",
     "comment" : "base class for hierarchical or other classification of Food Actors",
@@ -92,6 +97,13 @@
     "label" : "claimedBy",
     "range" : "foaf:Agent"
   }, {
+    "@id" : "ofd:downstreamRel",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "relationship to other food actors of the downstream of the Food Products flow",
+    "domain" : "foaf:Agent",
+    "label" : "Upstream Relation",
+    "range" : "ofd:ActorRelationship"
+  }, {
     "@id" : "ofd:harvestTime",
     "@type" : "owl:ObjectProperty",
     "comment" : "the min number of day/hours for the product to be available after purchase",
@@ -165,9 +177,9 @@
   }, {
     "@id" : "ofd:preparationTime",
     "@type" : "owl:ObjectProperty",
-    "comment" : "the min number of day/hours for the Actor to be available after commitment",
+    "comment" : "the min number of day/hours for the Actor to be ready after commitment",
     "domain" : "ofd:FoodActor",
-    "label" : "harvestPeriod",
+    "label" : "preparationTime",
     "range" : "qudt:QuantityValue"
   }, {
     "@id" : "ofd:producedBy",
@@ -197,6 +209,18 @@
     "label" : "quantitativeRestriction",
     "range" : "qudt:Value",
     "subPropertyOf" : "skos:semanticRelation"
+  }, {
+    "@id" : "ofd:relatedActor",
+    "@type" : "owl:ObjectProperty",
+    "domain" : "ofd:ActorRelationship",
+    "label" : "relatedActor",
+    "range" : "foaf:Agent"
+  }, {
+    "@id" : "ofd:relatedContext",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "context which identifies in more detail the kind of relationship. This could be a concept such as Actor Type or anything else which helps understand better the relationship",
+    "domain" : "ofd:ActorRelationship",
+    "label" : "relatedContext"
   }, {
     "@id" : "ofd:relatedFoodProduct",
     "@type" : "owl:ObjectProperty",
@@ -236,6 +260,13 @@
     "label" : "storageTemp",
     "range" : "qudt:Value"
   }, {
+    "@id" : "ofd:upstreamRel",
+    "@type" : "owl:ObjectProperty",
+    "comment" : "relationship to other food actors of the upstream of the Food Products flow",
+    "domain" : "foaf:Agent",
+    "label" : "Upstream Relation",
+    "range" : "ofd:ActorRelationship"
+  }, {
     "@id" : "ofd:usedInMaking",
     "@type" : "owl:ObjectProperty",
     "domain" : "ofd:FoodProduct",
@@ -245,12 +276,6 @@
     "inverseOf" : "ofd:madeOf"
   } ],
   "@context" : {
-    "comment" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
-    },
-    "label" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
     "range" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
       "@type" : "@id"
@@ -259,8 +284,29 @@
       "@id" : "http://www.w3.org/2000/01/rdf-schema#domain",
       "@type" : "@id"
     },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "prefLabel" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
+    },
+    "inverseOf" : {
+      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
+      "@type" : "@id"
+    },
     "homepage" : {
       "@id" : "http://xmlns.com/foaf/0.1/homepage",
+      "@type" : "@id"
+    },
+    "SameAs" : {
+      "@id" : "http://www.w3.org/2002/07/owl#SameAs",
       "@type" : "@id"
     },
     "name" : {
@@ -269,17 +315,6 @@
     "member" : {
       "@id" : "http://xmlns.com/foaf/0.1/member",
       "@type" : "@id"
-    },
-    "subPropertyOf" : {
-      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
-      "@type" : "@id"
-    },
-    "inverseOf" : {
-      "@id" : "http://www.w3.org/2002/07/owl#inverseOf",
-      "@type" : "@id"
-    },
-    "prefLabel" : {
-      "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
     },
     "creator" : {
       "@id" : "http://purl.org/dc/elements/1.1/creator",
@@ -322,10 +357,6 @@
     },
     "status" : {
       "@id" : "http://purl.org/dc/terms/status",
-      "@type" : "@id"
-    },
-    "SameAs" : {
-      "@id" : "http://www.w3.org/2002/07/owl#SameAs",
       "@type" : "@id"
     },
     "schema" : "https://schema.org/",
