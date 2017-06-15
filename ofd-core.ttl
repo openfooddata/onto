@@ -66,6 +66,11 @@ ofd:FoodService a owl:Class ;
     rdfs:comment "base class for Food Services. Instances are not actual Offerings." ;
     .
 
+ofd:ActorRelationship a owl:Class ;
+    rdfs:label "ActorRelationship" ;
+    rdfs:comment "Somewhat generic Relationship to another Food Actor in the context of the Flow of Food Products" ;
+    .
+
 # these might be anything that is used in the processes, ex: glass/plastic container, paper/plastic bag, cold box, printing paper, etc.
 # TODO link with vf:ResourceMaterialItemTemplate when ready
 ofd:NonFoodItem a owl:Class ;
@@ -144,8 +149,8 @@ ofd:harvestTime a owl:ObjectProperty ;
     rdfs:range qudt:QuantityValue .
 
 ofd:preparationTime a owl:ObjectProperty ;
-    rdfs:label "harvestPeriod" ;
-    rdfs:comment "the min number of day/hours for the Actor to be available after commitment" ;
+    rdfs:label "preparationTime" ;
+    rdfs:comment "the min number of day/hours for the Actor to be ready after commitment" ;
     rdfs:domain  ofd:FoodActor ;
     rdfs:range qudt:QuantityValue .
 
@@ -170,6 +175,28 @@ ofd:actorType a owl:ObjectProperty ;
     rdfs:domain foaf:Agent ;
     rdfs:range ofd:FoodActorType .
 
+ofd:upstreamRel a owl:ObjectProperty ;
+    rdfs:label "Upstream Relation" ;
+    rdfs:comment "relationship to other food actors of the upstream of the Food Products flow" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:ActorRelationship .
+
+ofd:downstreamRel a owl:ObjectProperty ;
+    rdfs:label "Upstream Relation" ;
+    rdfs:comment "relationship to other food actors of the downstream of the Food Products flow" ;
+    rdfs:domain foaf:Agent ;
+    rdfs:range ofd:ActorRelationship .
+
+ofd:relatedActor a owl:ObjectProperty ;
+    rdfs:label "relatedActor" ;
+    rdfs:domain ofd:ActorRelationship ;
+    rdfs:range foaf:Agent .
+
+ofd:relatedContext a owl:ObjectProperty ;
+    rdfs:label "relatedContext" ;
+    rdfs:comment "context which identifies in more detail the kind of relationship. This could be a concept such as Actor Type or anything else which helps understand better the relationship" ;
+    rdfs:domain ofd:ActorRelationship .
+
 ofd:offersFoodType a owl:ObjectProperty ;
     rdfs:label "offers FoodType" ;
     rdfs:domain foaf:Agent ;
@@ -179,7 +206,7 @@ ofd:producesFoodType a owl:ObjectProperty ;
     rdfs:label "produces FoodType" ;
     rdfs:subPropertyOf ofd:offersFoodType ;
     rdfs:domain foaf:Agent ;
-    rdfs:range ofd:FoodType.    
+    rdfs:range ofd:FoodType.
 
 ofd:offersProduct a owl:ObjectProperty ;
     rdfs:label "offers Product" ;
